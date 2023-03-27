@@ -1,0 +1,43 @@
+// 반응형
+$break-mobile: 320px;
+$break-tablet: 768px;
+$break-pc: 1440px;
+
+// mixin 사용 시 폰트 크기 지정
+$h1: 46px;
+$h2: 36px;
+$h3: 30px;
+$h4: 26px;
+$h5: 22px;
+$h6: 18px;
+
+// 메인 색상 3종
+$dark-brown: #6e3b3b;
+$red-brown: #ac3f21;
+$yellow-brown : #be6a15;
+$yellow : #f3cf7a;
+
+// 검정 계통 색상
+$bk1 :#3c3c3c; // 본문
+$bk2 :#5c5c5c; // 선택된 요소 (필터, 정렬방식 등)
+$bk3 : #acacac; // 미선택된 요소 (보기방식 등), placeholder , check or select box
+$bk4 : #c5c5c5; // 구분선
+$bk5 : #d4d4d4; // $bk6 위에 올려지는 요소의 배경색
+$bk6 : #f3f3f3; // 영역 배경
+$bk7 : #eeeeee;
+
+// 브레드크럼용 테두리 색상
+$breadcrumb-border: 1px solid rgba(255, 255, 255, 0.4);
+
+// svg 이미지 색상 변경
+$svg-black: brightness(0) saturate(100%);
+$svg-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+$svg-darkbrown: brightness(0) saturate(100%) invert(22%) sepia(6%) saturate(5831%) hue-rotate(314deg) brightness(94%) contrast(76%);
+$svg-redbrown: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(7470%) hue-rotate(350deg) brightness(103%) contrast(85%);
+$svg-yellowbrown: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+$svg-bk1: brightness(0) saturate(100%) invert(21%) sepia(13%) saturate(4%) hue-rotate(19deg) brightness(98%) contrast(91%);
+$svg-bk2: brightness(0) saturate(100%) invert(35%) sepia(11%) saturate(18%) hue-rotate(357deg) brightness(95%) contrast(91%);
+$svg-bk3: brightness(0) saturate(100%) invert(77%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(90%) contrast(92%);
+$svg-bk4: brightness(0) saturate(100%) invert(86%) sepia(4%) saturate(11%) hue-rotate(17deg) brightness(93%) contrast(90%);
+$svg-bk5: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(266%) hue-rotate(173deg) brightness(114%) contrast(91%);
+$svg-heart: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);

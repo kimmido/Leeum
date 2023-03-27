@@ -1,0 +1,232 @@
+@charset 'utf-8';
+@import './style.scss';
+@import './mixin.scss';
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.br-bar {
+    width: 3px; height: 18px;
+    margin: 0 8px 3px 0;
+    vertical-align: middle;
+    background: $yellow-brown;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    
+    font: {
+        size: 16px;
+        family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    }
+
+    letter-spacing: -0.04em;
+}
+
+input, textarea, button, select, pre {
+    font-family: inherit;
+    letter-spacing: -0.04em;
+}
+
+header {
+    margin-bottom: 6%;
+}
+
+main {
+    margin-bottom: 12%;
+}
+
+section > h2 {
+    font-size: 0;
+}
+
+ul, ol {
+    list-style: none;
+    -webkit-padding-start: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+header a, footer a {
+    transition: .3s;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+img, span, strong, label, time {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    border: 0;
+    background: transparent;
+}
+
+input {
+    
+    &:focus {
+        outline: none;
+    }
+
+    &[type=checkbox], &[type=radio] {
+        vertical-align: middle;
+        zoom: 1.1;
+    }
+
+    &[type=checkbox] {
+        position: relative;
+        width: 14px; height: 14px;
+        outline: none !important;
+        border: 1px solid $bk4;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        &:hover {
+            background: $bk5;
+        }
+        
+        &:checked {
+            color: #fff;
+            background-color: $red-brown;
+            border: 0;
+        }
+
+        &:checked::before {
+            border-radius: 2px;
+            transform: scale(1) translate(-50%, -50%);
+        }
+
+        &::before {
+            content: "\2713";
+            position: absolute;
+            top: 50%; left: 50%;
+            line-height: 1;
+            transform: scale(0) translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        & + label {
+            color: $bk1;
+            margin-left: 5px;
+        }
+
+        &:checked + label {
+            color: $red-brown;
+            font-weight: 600;
+        }
+    }
+
+    &[type=radio] {
+        position: relative;
+        width: 18px; height: 18px;
+        outline: none !important;
+        border: 1px solid $bk4 !important;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:hover {
+            background: $bk5;
+        }
+        
+        &:checked {
+            color: #fff;
+            background-color: $red-brown;
+            border: 0 !important;
+        }
+
+        &:checked::before {
+            border-radius: 2px;
+            transform: scale(1) translate(-50%, -50%);
+        }
+
+        &::before {
+            content: "\2713";
+            position: absolute;
+            top: 50%; left: 50%;
+            line-height: 1;
+            transform: scale(0) translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        & + label {
+            color: $bk1;
+            margin-left: 5px;
+        }
+
+        &:checked + label {
+            color: $red-brown;
+            font-weight: 600;
+        }
+    }
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+a, input, button, select, label {
+    cursor: pointer;
+}
+
+input, select {
+    border: 1px solid $bk5;
+    color: $bk2;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    &::-ms-expand {
+        display: none;
+    }
+    
+}
+
+textarea {
+    resize: none;
+}
+
+input, button, select, textarea, video {
+    border-radius: 5px;
+}
+
+h1 { font-size: 46px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 26px; }
+h5 { font-size: 22px; }
+h6 { font-size: 18px; }

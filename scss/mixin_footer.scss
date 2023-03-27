@@ -1,0 +1,297 @@
+@mixin footer() {
+
+    &.sub {
+        @include responsive(pc-screens) {
+            position: static !important;
+            top: 0 !important;
+        }
+    }
+
+    .sitemap-banner-wrap {
+        display: none;
+    
+        @include responsive(pc-screens) {
+            display: block;
+            height: 300px;
+            padding-top: 50px;
+            border-top: 1px solid $bk4;
+    
+            .sob {
+                @include flex_between();
+    
+                .sitemap {
+                    @include flex_between();
+                    width: 680px;
+                    
+                    div {
+                        width: 85px;
+    
+                        h6 {
+                            @include gothic_font(semibold, $h6);
+                            margin-bottom: 24px;
+                        }
+                        li {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    
+                }
+    
+                .outlink {
+                    width: 160px;
+    
+                    li {
+                        border-bottom: 1px solid #000;
+                        height: 35px;
+                        line-height: 35px;
+                        margin-bottom: 10px;
+    
+                        a {
+                            @include gothic_font(medium, $h6);
+                            width: 100%;
+                            padding: 0 10px 0 5px;
+    
+                            div {
+                                @include flex_between();
+                                align-items: center;
+    
+                                h5 {
+                                    @include gothic_font(semibold, $h6);
+                                }
+    
+                                img {
+                                    height: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .banner-box {
+                    width: 360px; height: 230px;
+                    @include full_bg('footer_membership_banner.png', index);
+    
+                    .banner-txt-wrap {
+                        position: relative;
+                        width: 100%; height: 205px;
+    
+                        .banner-txt {
+                            @include element_center();
+                            width: 230px;
+                            text-align: center;
+                            color: $dark-brown;
+    
+                            h6 {
+                                width: 200px;
+                                padding: 4px 15px;
+                                margin: 0 auto;
+                                border-radius: 20px;
+                                background-color: rgba(255, 255, 255, 0.4);
+                                opacity: 0.8;
+    
+                                span {
+                                    @include gothic_font(semibold);
+                                }
+                            }
+    
+                            p {
+                                @include gothic_font(medium);
+                                margin-top: 20px;
+                                line-height: 26px;
+    
+                                strong {
+                                    @include gothic_font(bold, $h6);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .site-info-wrap {
+        border-top: 1px solid $bk4;
+        height: 40px;
+        line-height: 40px;
+    
+        @include responsive(pc-screens) {
+            height: 70px;
+            line-height: 70px;
+        }
+    
+        .site-info {
+            @include flex-between();
+            @include gothic_font(semibold, 12px);
+    
+            @include responsive(pc-screens) {
+                font-size: 14px;
+            }
+    
+            .i1 {
+                width: 100%;
+    
+                @include responsive(pc-screens) {
+                    width: 760px;
+                }
+                ul {
+                    @include flex_between();
+    
+                    li {
+                        @include responsive(pc-screens) {
+                            justify-content: baseline;
+    
+                            &:first-child  { margin-right: 28px; }
+                            &:nth-child(2) { margin-right: 125px; }
+                            &:nth-child(3) { margin-right: 40px; }
+                            
+                            span.contact {
+                                margin-left: 20px;
+                                @include gothic_font(regular, 14px);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .i2 {
+                display: none;
+    
+                @include responsive(pc-screens) {
+                    display: inline-block;
+    
+                    select[name=family] {
+                        background: url('../../../image/icon_arrow.svg') no-repeat right 20px center;
+                        @include familySite();
+                    }
+                }
+            }
+    
+            .contact {
+                display: none;
+    
+                @include responsive(pc-screens) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    
+    
+    .leeum-info-wrap {
+        @include full_bg('footer_bg_pattern.png', index);
+        @include footer_bg();
+    
+        .leeum-info {
+            @include flex_between();
+            flex-direction: column;
+            color: #fff;
+    
+            @include responsive(tablet-screens) {
+                flex-wrap: nowrap;
+                flex-direction: row;
+            }
+    
+            address, p {
+                @include gothic_font(light, 13px);
+                margin-top: 8px;
+            }
+    
+            .place {
+                
+                h5 {
+                    display: inline-block;
+                }
+
+                @include responsive(tablet-screens) {
+                    width: calc((480/1400)*100%);
+                }
+    
+                .eng {
+                    @include batang_font(light, 14px);
+                    margin-left: 10px;
+                    opacity: 0.5;
+                }
+            }
+    
+            .hour {
+                margin-top: 40px;
+    
+                @include responsive(tablet-screens) {
+                    width: calc((480/1400)*100%);
+                    margin-top: 0;
+                }
+    
+                p > time {
+                    @include gothic_font(medium, $h6);
+                }
+    
+                span {
+                    @include gothic_font(regular);
+                }
+            }
+            
+            
+            .sns-copyright {
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                margin-top: 60px;
+    
+                @include responsive(tablet-screens) {
+                    width: calc((440/1400)*100%);
+                    margin-top: 65px;
+                }
+    
+                .sns {
+    
+                    a {
+                        height: 25px;
+            
+                        &:nth-child(2) {
+                            padding: 0 22px;
+                        }
+                    }
+    
+                    img {
+                        height: 25px;
+                    }
+                }
+    
+                p {
+                    margin-top: 20px; 
+                    font-size: 12px;
+                    letter-spacing: -0.02em;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+@mixin familySite() {
+    width: 160px; height: 40px; 
+    padding: 0 20px;
+    background-size: 10px;
+    filter: $svg-black;
+}
+
+@mixin footer_bg() {
+    background: {
+        position: -700px 0;
+        color: #000;
+    }
+    padding: 40px 0 30px;
+
+    @include responsive(tablet-screens) {
+        background: {
+            position-x: 0;
+            position: center;
+            size: 1920px;
+        }
+    }
+
+    @include responsive(pc-screens) {
+        height: 280px;
+        padding: 65px 0 90px;
+    }
+}
