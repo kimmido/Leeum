@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="정윤정">
+    <meta name="description" content="리움미술관에 로그인하고 전시, 프로그램, 멤버십 등 폭넓은 서비스를 경험해보세요.">
+    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-jp-dynamic-subset.css" as="style" crossorigin>
+    <link rel="stylesheet" type="text/css" href="./css/register_login.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="./js/register.js"></script>
+    <title>로그인 | Leeum</title>
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <div class="login-wrap">
+                <div class="image">
+                    <a href="../../index.html"><img src="../../image/logo_leeum_vertical.svg" alt="리움미술관 로고"></a>
+                </div> 
+                <div class="login-tab-form">
+                    <div class="side-tab login-all">
+                        <ul class="tab-wrap login-select">
+                            <li class="tab on"><span>웹 회원</span></li>
+                            <li class="tab"><span>프렌즈 회원</span></li>
+                            <li class="tab"><span>패밀리 회원</span></li>
+                        </ul>
+                    </div>
+                    <div class="login-form">
+                        <form class="loginForm">
+                            <div class="inputForm">
+                                <input type="text" name="id" id="id" class="text-field" maxlength="12" placeholder="아이디">
+                                <input type="password" name="pwd" id="pwd" class="pwd-field" maxlength="12" placeholder="비밀번호">
+                            </div>
+                        </form>
+                        <div>
+                            <input type="submit" value="로그인" class="submit-btn" onclick="login1()">
+                        </div>
+                                <div class="id-chk"> 
+                                <input type="checkbox" class="chkbox" id="id-storage">
+                                <label for="id-storage">아이디 저장</label>
+                            </div>
+                        <div class="id-pw-join">
+                            <div class="id-pw">
+                                <a href="">
+                                    <span>아이디 · 비밀번호 찾기</span>
+                                </a>
+                            </div>
+                            <div class="mem">
+                                <a href="./register_join_type.html">
+                                    <span>회원가입</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

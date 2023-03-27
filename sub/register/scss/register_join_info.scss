@@ -1,0 +1,358 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import './register.scss';
+
+.container {
+    overflow-x: hidden;
+
+    .member {
+        margin-top: 120px;
+
+        .import {
+            margin-right: 5px;
+            color: red;
+        }
+
+        .title-box {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 30px;
+
+            .title {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                @include gothic_font(semibold, 20px);
+                text-align: center;
+                
+                @include responsive(pc-screens) {
+                    font-size: 28px;
+                }
+            }
+            .essential {
+                margin-top: 60px;
+                @include gothic_font(medium, 14px);
+
+                @include responsive(pc-screens) {
+                    margin-right: 25px;
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        form {
+            @include out_container();
+            border-bottom: 2px solid $bk2;
+            border-top: 2px solid $bk2;
+            
+            @include responsive(pc-screens) {
+                @include in_container();
+            }
+    
+            label {
+                display: inline;
+            }
+    
+            input {
+                padding: 6px;
+                font-size: 16px;
+                @include responsive(pc-screens) {
+                    font-size: 18px;
+                    padding: 10px;
+                }
+            }
+            
+            .field {
+                display: flex;
+                align-items: center;
+                
+                border-bottom: 1px solid $bk3;
+                padding: 15px 20px;
+        
+                .letter {
+                    @include gothic_font(semibold);
+                    display: flex;
+                    align-items: center;
+    
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                    }
+                }
+                label:first-child{
+                    width: 35%;
+                    
+                    @include responsive(tablet-screens) {
+                        width: 25%;
+                    }
+
+                    @include responsive(pc-screens) {
+                        width: 15%;
+                    }
+                }
+                
+                &.name,
+                &.birth,
+                &.id,
+                &.pw,
+                &.pw-confirm {
+                    input:first-child {
+                        flex: 1;
+                    }
+                }
+        
+                &.name {
+                    input{
+                        @include responsive(pc-screens) {
+                            width: 10%;
+                        }
+                    }
+                }
+    
+                &.id {
+                    display: flex;
+                    
+                    input:last-child{
+                        margin-right: 0;
+                    }
+                }
+    
+                &.tel-number {
+                    input {
+                        width: 76%;
+    
+                        &:last-child {
+                            margin-right: 0;
+                            width: 75%;
+                        }
+                    }
+                }
+    
+                &.mail,
+                &.address {
+                    input {
+                        background-color: $bk6;
+                    }
+                }
+    
+                &.mail {
+                    .entry {
+                        position: relative;
+                        display: flex;
+                        
+                        .write {
+                            @include flex_between_center();
+                            width: 100%;
+
+                            #mail, #email_add { 
+                                width: 45%; 
+
+                                @include responsive(tablet-screens) {
+                                    width: 48%;
+                                }
+                            }
+                            @include responsive(pc-screens) {
+                                column-gap: 10px;
+                            }
+                        }
+                        
+                        select{
+                            width: 100%;
+                            margin-top: 10px;
+                            text-align: center;
+                            @include full_bg('icon_arrow_bk.svg', index);
+                            background-position: right 10px center;
+                            padding: 6px;
+                            background-color: #fff;
+                            background-size: 10px;
+
+                            @include responsive(pc-screens) {
+                                width: 45%;
+                                padding: 10px;
+                                margin-top: 0;
+                                font-size: 18px;
+                                text-align: left;
+                            }
+                        }
+    
+                        input {
+                            width: 27.695652%;
+                            text-align: center;
+    
+                            @include responsive(pc-screens) {
+                                width: 25.695652%;
+                            }
+                        }
+                    }
+                }
+        
+                &.address {
+                    .add {
+    
+                        .flex {
+                            @include flex_between();
+                            column-gap: 10px;
+
+                            @include responsive(pc-screens) {
+                                justify-content: flex-start;
+                                width: 100%;
+                            }
+    
+                            input {
+                                &:first-child {                        
+                                    width: 60%;
+
+                                    @include responsive(pc-screens) {
+                                        width: 70%;
+                                    }
+                                }
+    
+                                &:last-child {
+                                    width: 40%;
+
+                                    @include responsive(pc-screens) {
+                                        width: 30%;
+                                    }
+                                }
+                            }
+    
+                            .postcode {
+                                padding: 8px 0;
+                                margin-right: 0;
+                                font-size: 14px;
+                                background: $bk1;
+                                color: white;
+    
+                                @include responsive(pc-screens) {
+                                    padding: 10px 0;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+    
+                        .alone-add {
+                            width: 100%;
+                            input {        
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+    
+                .entry {
+                    width: 100%;
+                    
+                    &#add {
+                        @include responsive(pc-screens) {
+                            width: 35%;
+                        }
+                    }
+                    &:not(#add) {
+                        @include flex_between_center();
+                        flex-wrap: wrap;
+                        column-gap: 10px;
+
+                        @include responsive(pc-screens) {
+                            flex-wrap: nowrap;
+                            width: 35%;
+                        }
+                    }
+
+                    #id {
+                        width: 65%;
+                    }
+
+                    &.radio {
+                        justify-content: flex-start !important;
+                        row-gap: 10px;
+
+                        label {
+                            width: 30%;
+
+                            @media screen and(min-width: 490px) {
+                                width: 20%;
+                            }
+
+                            @include responsive(tablet-screens) {
+                                width: 15%;
+                            }
+
+                            @include responsive(pc-screens) {
+                                width: 20%;
+                            }
+                        }
+
+                        
+                    }
+
+                    span {
+                        margin-bottom: 10px;
+
+                        &:last-child, &.dot {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    button {
+                        width: 30%;
+                        padding: 8px 0;
+                        font-size: 14px;
+                        background-color: $dark-brown;
+                        color: white;
+
+                        @include responsive(pc-screens) {
+                            font-size: 16px;
+                            padding: 10px 0;
+                        }
+                    }
+                    input {
+                        border: 0;
+                    }
+    
+                    @include responsive(pc-screens) {
+                        width: 100%;
+                        padding-left: 0;
+                    }
+    
+                    p {
+                        text-align: left;
+                    }
+
+                }
+    
+                &.gender,
+                &.agree {
+
+                    input[type=radio] {
+                        margin-right: 5px;
+                        font-size: 14px;
+                        border: 1px solid $bk4;
+
+                        &:checked {
+                            border: 1px solid $red-brown;
+
+                        }
+                    }
+                }
+    
+                &.agree {
+                    border-bottom: 0;
+    
+                    .warning {
+                        @include gothic_font(regular, 14px);
+                        color: $bk2;
+
+                        @include responsive(tablet-screens) {
+                            margin-top: 0;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

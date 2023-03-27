@@ -1,0 +1,783 @@
+@charset "UTF-8";
+/* -------------------------------------------------------------------------------------------------------------------- */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+input, textarea, button, select, pre {
+  font-family: inherit;
+  letter-spacing: -0.04em;
+}
+
+header {
+  margin-bottom: 6%;
+}
+
+main {
+  margin-bottom: 12%;
+}
+
+section > h2 {
+  font-size: 0;
+}
+
+ul, ol {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+header a:hover, footer a:hover {
+  font-weight: bold;
+}
+
+img, span, strong, label, time {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.1;
+}
+input[type=checkbox] {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  outline: none !important;
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=checkbox]:hover {
+  background: #d4d4d4;
+}
+input[type=checkbox]:checked {
+  color: #fff;
+  background-color: #ac3f21;
+  border: 0;
+}
+input[type=checkbox]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
+}
+input[type=checkbox] + label {
+  color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
+}
+input[type=radio] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  outline: none !important;
+  border: 1px solid #c5c5c5 !important;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=radio]:hover {
+  background: #d4d4d4;
+}
+input[type=radio]:checked {
+  color: #fff;
+  background-color: #ac3f21;
+  border: 0 !important;
+}
+input[type=radio]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=radio]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
+}
+input[type=radio] + label {
+  color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=radio]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a, input, button, select, label {
+  cursor: pointer;
+}
+
+input, select {
+  border: 1px solid #d4d4d4;
+  color: #5c5c5c;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input, button, select, textarea, video {
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+label {
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .select {
+    margin-top: 60px;
+  }
+}
+.select .image-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin: 20px 0 20px 0;
+  z-index: 50;
+}
+.select .image-info img {
+  width: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .select .image-info img {
+    width: 60px;
+  }
+}
+.select .image-info .text p {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  .select .image-info .text p {
+    font-size: 18px;
+  }
+}
+.select .image-info .text strong {
+  margin-top: 2px;
+  font-size: 22px;
+  color: #3c3c3c;
+}
+@media screen and (min-width: 1440px) {
+  .select .image-info .text strong {
+    font-size: 30px;
+  }
+}
+.select ul.select {
+  position: static;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  padding: 0 20px 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  .select ul.select {
+    width: 40%;
+    padding: 0;
+    top: 63px;
+    right: 20px;
+    left: inherit;
+  }
+}
+.select ul.select li {
+  position: relative;
+  height: 45px;
+  border: 1px solid #c5c5c5;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1440px) {
+  .select ul.select li {
+    margin-top: 0;
+  }
+}
+.select ul.select li:first-child {
+  width: 33.3333333333%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.select ul.select li:nth-child(2) {
+  width: 33.3333333333%;
+  border-left: 0;
+  border-right: 0;
+}
+.select ul.select li:last-child {
+  width: 33.3333333333%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.select ul.select li.on {
+  background-color: #3c3c3c;
+}
+.select ul.select li.on span {
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .select ul.select li {
+    height: 55px;
+  }
+}
+.select ul.select li span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  .select ul.select li span {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .select ul.select li span {
+    font-size: 18px;
+  }
+}
+.select ul.select li span b {
+  font-weight: 600;
+}
+
+.submit {
+  text-align: center;
+}
+.submit a {
+  width: 100%;
+}
+.submit input {
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.submit input:hover {
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
+}
+@media screen and (min-width: 1440px) {
+  .submit input {
+    width: 10%;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+}
+
+div.movePage {
+  margin-top: 40px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 100px;
+  }
+}
+div.movePage .movePage-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.movePage .movePage-wrap a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+div.movePage .movePage-wrap a:hover {
+  color: #000;
+}
+div.movePage .movePage-wrap a:hover::after {
+  transform: scale(1);
+}
+div.movePage .movePage-wrap a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+div.movePage .movePage-wrap a img {
+  height: 14px;
+  filter: #3c3c3c;
+}
+div.movePage .movePage-wrap a.prev img {
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+div.movePage .movePage-wrap a.next .title {
+  text-align: right;
+}
+div.movePage .movePage-wrap a.next img {
+  margin-left: 10px;
+}
+div.movePage .movePage-wrap a p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  div.movePage .movePage-wrap a p {
+    display: inline-block;
+  }
+  div.movePage .movePage-wrap a p .vert-bar {
+    width: 1px;
+    height: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #acacac;
+  }
+  div.movePage .movePage-wrap a p .title {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    color: #5c5c5c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 40px !important;
+  }
+}
+
+.container {
+  overflow-x: hidden;
+}
+.container div.join-info {
+  margin-top: 120px;
+}
+.container div.join-info p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info p {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+.container div.join-info form {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-top: 2px solid #5c5c5c;
+  border-bottom: 2px solid #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form label {
+    width: 14.2857142857%;
+  }
+}
+.container div.join-info form .text {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #acacac;
+}
+.container div.join-info form .text .box {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  width: 73%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text .box {
+    width: 20%;
+  }
+}
+.container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
+  width: 27%;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
+    width: 15%;
+    font-size: 18px;
+  }
+}
+.container div.join-info form .text.id:last-child, .container div.join-info form .text.date:last-child, .container div.join-info form .text.phone-certify-name:last-child {
+  border: 0;
+}
+.container div.join-info form .text.id select,
+.container div.join-info form .text.id input, .container div.join-info form .text.date select,
+.container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name select,
+.container div.join-info form .text.phone-certify-name input {
+  padding: 8px;
+  font-size: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.id select,
+.container div.join-info form .text.id input, .container div.join-info form .text.date select,
+.container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name select,
+.container div.join-info form .text.phone-certify-name input {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+.container div.join-info form .text.id input {
+  width: 100%;
+  border: 0;
+}
+.container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name input {
+  border: 0;
+  background-color: #f3f3f3;
+}
+.container div.join-info form .text.date .box {
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .container div.join-info form .text.date .box {
+    justify-content: flex-start;
+  }
+}
+.container div.join-info form .text.date input {
+  width: 32%;
+}
+.container div.join-info form .text.date input.front {
+  flex: 1;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.date input {
+    width: 12%;
+  }
+}
+.container div.join-info form .text.date .back {
+  width: 30px;
+  text-align: center;
+}
+.container div.join-info form .text.date .hide {
+  letter-spacing: 0.1em;
+  color: #acacac;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.phone-certify-name .box {
+    width: 85%;
+  }
+}
+.container div.join-info form .text.phone-certify-name select {
+  background-image: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 5px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 25%;
+  background-color: #f3f3f3;
+  border: 0;
+}
+.container div.join-info form .text.phone-certify-name select.telecom {
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.phone-certify-name select {
+    width: 5.517241%;
+  }
+}
+.container div.join-info form .text.phone-certify-name input {
+  width: 25%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.phone-certify-name input {
+    width: 5%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container div.all {
+    padding: 0;
+  }
+}
+.container div.all div.join-info {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+.container div.all div.join-info p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info p {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+.container div.all div.join-info form {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form label {
+    width: 14.2857142857%;
+  }
+}
+.container div.all div.join-info form .text.id, .container div.all div.join-info form .text.date, .container div.all div.join-info form .text.phone-certify-name {
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
+}
+.container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
+  width: 19.7142857143%;
+  font-size: 13px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
+    width: 14.2857142857%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.id, .container div.all div.join-info form .text.date, .container div.all div.join-info form .text.phone-certify-name {
+    padding: 20px;
+  }
+}
+.container div.all div.join-info form .text.id:last-child, .container div.all div.join-info form .text.date:last-child, .container div.all div.join-info form .text.phone-certify-name:last-child {
+  border: 0;
+}
+.container div.all div.join-info form .text.id select,
+.container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
+.container div.all div.join-info form .text.phone-certify-name input {
+  padding: 8px;
+  font-size: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.id select,
+.container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
+.container div.all div.join-info form .text.phone-certify-name input {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+.container div.all div.join-info form .text.id input {
+  border: 0;
+}
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name input {
+  border: 0;
+  background-color: #f3f3f3;
+}
+.container div.all div.join-info form .text.date input {
+  width: 28%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.date input {
+    width: 11%;
+  }
+}
+.container div.all div.join-info form .text.date .back {
+  width: 7%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.date .back {
+    width: 2%;
+  }
+}
+.container div.all div.join-info form .text.phone-certify-name select {
+  margin-right: 8px;
+  background-image: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 5px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 15%;
+  background-color: #f3f3f3;
+  border: 0;
+}
+.container div.all div.join-info form .text.phone-certify-name select:first-child {
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.phone-certify-name select {
+    width: 5.517241%;
+  }
+}
+.container div.all div.join-info form .text.phone-certify-name input {
+  width: 14%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info form .text.phone-certify-name input {
+    width: 5%;
+  }
+}
+.container div.confirm {
+  text-align: center;
+}
+.container div.confirm input {
+  margin-top: 40px;
+  border: 0;
+  background-color: #6e3b3b;
+  color: white;
+  padding: 8px 15px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.confirm input {
+    padding: 13px 20px;
+  }
+}

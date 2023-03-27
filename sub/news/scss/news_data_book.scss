@@ -1,0 +1,87 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('data_book_header.jpg');
+}
+
+main {
+    section.search-wrap {
+        @include section_filter();
+
+        .search-box {
+            @include filter_wrap();
+
+            .speed-search {
+                @include speed_search();
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: 0;
+                
+                form[name=keyword] input {
+                    width: 100%;
+
+                    @include responsive(pc-screens) {
+                        width: 84%;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .list-control {
+            @include list_control();
+            margin-top: 40px;
+            margin-bottom: 60px;
+
+            @include responsive(pc-screens) {
+                margin-top: 80px;
+            }
+        }
+
+        .item-box {
+            @include itemList_box();
+
+            .item {
+                @include responsive(pc-screens) {
+                    width: 32.5%;
+                }
+
+                .i-pic {
+                    @include responsive(pc-screens) {
+                        height: 580px;
+                    }
+                }
+
+                .i-des {
+                    
+                    span {
+                        font-size: 14px;
+                        color: $bk2;
+                        
+                        &.star {
+                            color: $yellow-brown;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    section.paging {
+        @include paging();
+    }
+}
+
+footer {
+    @include footer();
+}

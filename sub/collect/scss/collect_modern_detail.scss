@@ -1,0 +1,61 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('modern_header.jpg');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+        @include detail_slide(2);
+
+        .item-wrap .tit-exp {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    section.work {
+
+        .collect-wrap:not(:first-child) h6 {
+            margin-top: 60px;
+        }
+        
+        .item-box {
+            @include itemList_box();
+            flex-wrap: nowrap;
+            margin-top: 30px;
+
+            @include responsive(pc-screens) {
+                justify-content: flex-start;
+            }
+
+            .item.ac {
+                margin-right: 15px;
+            }
+        }
+
+        .swiper {
+            @include work_swiper();
+        }
+    }
+    
+    section.movePage {
+        @include move_page();
+    }
+}
+footer {
+    @include footer();
+}
+
+@include fancybox_style();

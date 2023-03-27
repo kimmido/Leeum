@@ -1,0 +1,95 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('data_pdf_header.jpg');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+
+        .i-slide img {
+            width: 100%;
+            @include responsive(pc-screens) {
+                border-radius: 5px;
+                margin-top: 40px;
+            }
+        }
+
+        .i-des .loc-icon {
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .mini-box {
+            margin-bottom: 20px !important;
+
+            td {
+                @include content_align(justify);
+            }
+        }
+
+        .introduce strong {
+                margin-top: 20px;
+                margin-bottom: 5px;
+        }
+
+        .down-img {
+            width: 100%;
+            text-align: center;
+            
+            a {
+                padding: 10px 15px;
+                width: 100%;
+                border: 1px solid $bk4;
+                border-radius: 5px;
+                font-size: 15px;
+                color: $bk2;
+                transition:  all .3s;
+
+                &:hover {
+                    color: white;
+                    background: $dark-brown;
+                    box-shadow: rgb(110 59 59 / 50%) 0px 18px 25px -10px;
+                    transition: all 0.4s;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 20px;
+                }
+
+                img {
+                    height: 12px;
+                    margin-right: 6px;
+
+                    &:hover {
+                        filter: none;
+                    }
+                }
+
+                span {
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
+
+    section.movePage {
+        @include move_page();
+    }
+}
+
+footer {
+    @include footer();
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박민주">
+    <meta name="description" content="리움미술관은 명품 수집을 넘어 명장 · 명작을 발굴한 소장품을 전시하고 있습니다.">
+    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-jp-dynamic-subset.css" as="style" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/collect_antique.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../js/common.js"></script>
+    <title>고미술 | Leeum</title>
+</head>
+<body>
+    <header>
+        <div class="mobile-menu-popup hidden">
+            <div class="window">
+                <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
+                <div class="popup">
+                    <div class="bk-menu">
+                        <a href="../../index.html"><img src="../../image/logo_leeum_typo.svg" alt="메인으로 이동" class="logo"></a>
+                        <ul class="icon-box">
+                            <li><a href="../register/register_login.html"><img src="../../image/icon_user.svg">MY</a></li>
+                            <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="../../image/icon_reserve.svg">예매</a></li>
+                            <li><a href="https://leeumstore.org/"><img src="../../image/icon_store.svg">스토어</a></li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="search" placeholder="검색어를 입력하세요" class="search">
+                            <button type="button" class="search-btn">
+                        </div>
+                    </div>
+                    <div class="wh-menu">
+                        <div class="m1">
+                            <div class="group">
+                                <h6>리움</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                <li><a href="../about/about_map.html">오시는 길</a></li>
+                                <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                            </ul>
+                        </div>
+                        <div class="m2">
+                            <div class="group">
+                                <h6>전시</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                            </ul>
+                        </div>
+                        <div class="m3">
+                            <div class="group">
+                                <h6>소장품</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                            </ul>
+                        </div>
+                        <div class="m4">
+                            <div class="group">
+                                <h6>프로그램</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                            </ul>
+                        </div>
+                        <div class="m5">
+                            <div class="group">
+                                <h6>작가</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../artist/artist.html">작가</a></li>
+                            </ul>
+                        </div>
+                        <div class="m6">
+                            <div class="group">
+                                <h6>소식</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../news/news_notice.html">공지사항</a></li>
+                                <li><a href="../news/news_data.html">자료</a></li>
+                                <li><a href="../news/news_faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-menu-wrap">
+            <div class="container">
+                <div class="logo-menu">
+                    <div class="logo">
+                        <a href="../../index.html"></a>
+                    </div>
+                    <div class="mobile-menu">
+                        <img src="../../image/icon_mobile_menu.svg" alt="모바일 메뉴">
+                    </div>
+                    <nav class="pc-menu">
+                        <div class="gnb one">
+                            <ul>
+                                <li>
+                                    <a href="../about/about_intro.html" class="group m1">리움</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                        <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                        <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                        <li><a href="../about/about_map.html">오시는 길</a></li>
+                                        <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../exhibition/exhibition_now.html" class="group m2">전시</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                        <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../collect/collect_antique.html" class="group m3">소장품</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                        <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                        <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                        <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../program/program_now.html" class="group m4">프로그램</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                        <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../artist/artist.html" class="group">작가</a></li>
+                                <li>
+                                    <a href="../news/news_notice.html" class="group m6">소식</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../news/news_notice.html">공지사항</a></li>
+                                        <li><a href="../news/news_data.html">자료</a></li>
+                                        <li><a href="../news/news_faq.html">FAQ</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gnb two">
+                            <ul class="mini-menu">
+                                <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움 스토어</a></li>
+                                <li>
+                                    <div class="lang">
+                                        <img src="../../image/icon_language.svg">KOR<img src="../../image/icon_arrow.svg" class="dropdown">
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="icon-menu">
+                                <li><a href="../register/register_login.html" class="login"></a></li>
+                                <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do" class="reserve"></a></li>
+                                <li><a class="search"></a>
+                                    <div class="search-box hidden">
+                                        <input type="search" placeholder="검색어를 입력하세요" class="searchbar">
+                                        <button type="button" class="search-btn">
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="lang-opt">
+                                <li><a class="on">KOR</a></li>
+                                <li><a>ENG</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="sub-title">
+            <p class="eng">antique art</p>
+            <h2 class="kor">고미술</h2>
+        </div>
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li class="home"><a href="/../../index.html"></a></li>
+                    <li class="loc">
+                        <div class="step">
+                            <a href="">소장품</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                        </div>
+                        <ul class="opt">
+                            <li><a href="../about/about_intro.html">리움</a></li>
+                            <li><a href="../exhibition/exhibition_now.html">전시</a></li>
+                            <li><a href="../collect/collect_antique.html" class="on">소장품</a></li>
+                            <li><a href="../program/program_now.html">프로그램</a></li>
+                            <li><a href="../artist/artist.html">작가</a></li>
+                            <li><a href="../news/news_notice.html">소식</a></li>
+                        </ul>
+                    </li>
+                    <li class="loc">
+                        <div class="step">
+                            <a href="../collect/collect_antique.html">고미술</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                        </div>
+                        <ul class="opt">
+                            <li><a href="../collect/collect_antique.html" class="on">고미술</a></li>
+                            <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                            <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                            <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="filter">
+            <h2>검색 및 필터</h2>
+            <div class="container">
+                <div class="filter-wrap">
+                    <div class="speed-search">
+                        <h6>키워드 검색</h6>
+                        <form name="keyword" action="#" method="post">
+                            <select>
+                                <option hidden>분류</option>
+                                <option value="title">작품명</option>
+                                <option value="type">유형</option>
+                                <option value="period">시대</option>
+                                <option value="material">기법 및 안료</option>
+                                <option value="texture">재질</option>
+                            </select>
+                            <input type="search" placeholder="검색어를 입력하세요">
+                            <button type="button"><img src="../../image/icon_search.svg">빠른 검색</button>
+                        </form>
+                    </div>
+                    <div class="detail-search-wrap">
+                        <button type="button" class="ds-btn">상세 검색 <span class="status">닫기</span><img src="../../image/icon_arrow.svg" class="active"></button>
+                        <div class="detail-search">
+                            <form name="detail" action="#" method="post">
+                                <div class="opt-box">
+                                    <div class="type">
+                                        <h6>소장품 유형</h6>
+                                        <ul class="opt">
+                                            <li>도자기</li>
+                                            <li>서화</li>
+                                            <li>불교미술</li>
+                                            <li>금속 · 목공예</li>
+                                        </ul>
+                                    </div>
+                                    <div class="space">
+                                        <h6>전시 공간</h6>
+                                        <ul class="opt">
+                                            <li>M1</li>
+                                            <li>M2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="chk-box">
+                                    <ul class="grp designated">
+                                        <li class="title">지정 문화재</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" name="designated" id="n-treasure"><label for="n-treasure">국보</label></li>
+                                                <li><input type="checkbox" name="designated" id="treasure"><label for="treasure">보물</label></li>
+                                            </ul>
+                                            
+                                        </li>
+                                    </ul>
+                                    <ul class="grp period">
+                                        <li class="title">시대</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" name="period" id="t-king"><label for="t-king">삼국시대</label></li>
+                                                <li><input type="checkbox" name="period" id="gaya"><label for="gaya">가야</label></li>
+                                                <li><input type="checkbox" name="period" id="silla"><label for="silla">신라</label></li>
+                                                <li><input type="checkbox" name="period" id="u-silla"><label for="u-silla">통일신라</label></li>
+                                                <li><input type="checkbox" name="period" id="goryeo"><label for="goryeo">고려</label></li>
+                                                <li><input type="checkbox" name="period" id="joseon"><label for="joseon">조선</label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="grp material">
+                                        <li class="title">기법 및 안료</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" name="material" id="coloring"><label for="coloring">채색</label></li>
+                                                <li><input type="checkbox" name="material" id="sumuk"><label for="sumuk">수묵</label></li>
+                                                <li><input type="checkbox" name="material" id="sumuk-damchae"><label for="sumuk-damchae">수묵담채</label></li>
+                                                <li><input type="checkbox" name="material" id="mukseo"><label for="mukseo">묵서</label></li>
+                                                <li><input type="checkbox" name="material" id="geumeun-ni"><label for="geumeun-ni">금은니</label></li>
+                                                <li><input type="checkbox" name="material" id="geum-ni"><label for="geum-ni">금니</label></li>
+                                                <li><input type="checkbox" name="material" id="geumeun-jang"><label for="geumeun-jang">금은장</label></li>
+                                                <li><input type="checkbox" name="material" id="najeon"><label for="najeon">나전</label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="grp texture">
+                                        <li class="title">재질</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" name="texture" id="paper"><label for="paper">종이</label></li>
+                                                <li><input type="checkbox" name="texture" id="paper-mulberry"><label for="paper-mulberry">닥종이</label></li>
+                                                <li><input type="checkbox" name="texture" id="tree"><label for="tree">나무</label></li>
+                                                <li><input type="checkbox" name="texture" name="texture" id="clay"><label for="clay">점토</label></li>
+                                                <li><input type="checkbox" name="texture" id="w-clay"><label for="w-clay">백토</label></li>
+                                                <li><input type="checkbox" name="texture" id="daemo"><label for="daemo">대모</label></li>
+                                                <li><input type="checkbox" name="texture" id="silks"><label for="silks">비단</label></li>
+                                                <li><input type="checkbox" name="texture" id="jade"><label for="jade">옥</label></li>
+                                                <li><input type="checkbox" name="texture" id="gold"><label for="gold">금</label></li>
+                                                <li><input type="checkbox" name="texture" id="sliver"><label for="sliver">은</label></li>
+                                                <li><input type="checkbox" name="texture" id="copper"><label for="copper">동</label></li>
+                                                <li><input type="checkbox" name="texture" id="bronze"><label for="bronze">청동</label></li>
+                                                <li><input type="checkbox" name="texture" id="silver-inlaid"><label for="silver-inlaid">은입사</label></li>
+                                                <li><input type="checkbox" name="texture" id="steel"><label for="steel">철</label></li>
+                                                <li><input type="checkbox" name="texture" id="plated"><label for="plated">도금</label></li>
+                                                <li><input type="checkbox" name="texture" id="glass"><label for="glass">유리</label></li>
+                                                <li><input type="checkbox" name="texture" id="calm"><label for="calm">조개</label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-box">
+                                    <button type="submit"><img src="../../image/icon_search.svg">상세 검색</button>
+                                    <button type="reset"><img src="../../image/icon_reset.svg">초기화</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="itemList">
+            <h2>소장품 목록</h2>
+            <div class="container">
+                <div class="itemList-wrap">
+                    <div class="list-control">
+                        <div class="count">
+                            <span>총 <b>191</b>건</span>
+                            <input type="checkbox" id="now" checked><label for="now">현재 전시 중</label>
+                        </div>
+                        <button class="sort"><img src="../../image/icon_filter.svg"><span>정렬 방식</span></button>
+                        <div class="view-type">
+                            <ul class="sort-list">
+                                <li class="on">조회순</li>
+                                <li>최근등록순</li>
+                            </ul>
+                            <select name="nth-view">
+                                <option value="n-12">12개씩 보기</option>
+                                <option value="n-24">24개씩 보기</option>
+                                <option value="n-36">36개씩 보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(1).jpg" alt="청자철화 보상화당초문 매병" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>청자철화 보상화당초문 매병</strong>
+                                    <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 4층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(2).jpg" alt="분청사기상감 용문 매병" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>분청사기상감 용문 매병</strong>
+                                    <p>조선 15세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(3).jpg" alt="금제 귀걸이" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>금제 귀걸이</strong>
+                                    <p>삼국시대 5-6세기<span class="vert-bar">&vert;</span>금(金)<span class="vert-bar">&vert;</span>보물</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 1층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(4).jpg" alt="백자청화 송학녹문 필통" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 송학녹문 필통</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(5).jpg" alt="백자청화 낙서국화문 연적" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 낙서국화문 연적</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(6).jpg" alt="백자음각 거북이형 계영배 받침" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자음각 거북이형 계영배 받침</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(7).jpg" alt="백자청화 모란문 주자" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 모란문 주자</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(8).jpg" alt="백자청화 운룡문 호" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 운룡문 호</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(9).jpg" alt="백자청화 화조문 호" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 화조문 호</strong>
+                                    <p>조선 18세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(10).jpg" alt="백자청화 부귀다남자수복강녕명 호" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자청화 부귀다남자수복강녕명 호</strong>
+                                    <p>조선 19세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(11).jpg" alt="백자 유개호" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>백자 유개호</strong>
+                                    <p>조선 16세기<span class="vert-bar">&vert;</span>백토(白土)</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 3층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="./collect_antique_detail.html">
+                                <div class="i-pic">
+                                    <img src="./image/antique_item(12).jpg" alt="배모양 토기" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>배모양 토기</strong>
+                                    <p>가야 4-5세기<span class="vert-bar">&vert;</span>점토(粘土)<span class="vert-bar">&vert;</span>보물</p>
+                                    <div class="loc">
+                                        <div class="tag">전시</div><div>M1 1층</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="paging">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="on">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"class="next"></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sitemap-banner-wrap">
+            <div class="container">
+                <div class="sob">
+                    <div class="sitemap">
+                        <div class="m1">
+                            <h6>리움</h6>
+                            <ul>
+                                <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                <li><a href="../about/about_map.html">오시는 길</a></li>
+                                <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                            </ul>
+                        </div>
+                        <div class="m2">
+                            <h6>전시</h6>
+                            <ul>
+                                <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                            </ul>
+                        </div>
+                        <div class="m3">
+                            <h6>소장품</h6>
+                            <ul>
+                                <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                            </ul>
+                        </div>
+                        <div class="m4">
+                            <h6>프로그램</h6>
+                            <ul>
+                                <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                            </ul>
+                        </div>
+                        <div class="m5">
+                            <h6>작가</h6>
+                            <ul>
+                                <li><a href="../artist/artist.html">작가</a></li>
+                            </ul>
+                        </div>
+                        <div class="m6">
+                            <h6>소식</h6>
+                            <ul>
+                                <li><a href="../news/news_notice.html">공지사항</a></li>
+                                <li><a href="../news/news_data.html">자료</a></li>
+                                <li><a href="../news/news_faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="outlink">
+                        <ul>
+                            <li>
+                                <a href="https://ticket.leeum.org/leeum/personal/exhibitList.do">
+                                    <div class="reserve">
+                                        <h6>예약 · 예매</h6>
+                                        <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://leeumstore.org/">
+                                    <div class="store">
+                                        <h6>리움 스토어</h6>
+                                        <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../register/register_join_type.html" class="banner">
+                        <div class="banner-box">
+                            <div class="banner-txt-wrap">
+                                <div class="banner-txt">
+                                    <h6>LEEUM <span>MemberShip</span></h6>
+                                    <p>
+                                        <strong>리움 멤버십</strong>에 가입하고<br>
+                                        <strong>무료 관람 및 유료 프로그램 할인</strong> 등<br>
+                                        다양한 혜택을 만나보세요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="site-info-wrap">
+            <div class="container">
+                <div class="site-info">
+                    <div class="i1">
+                        <ul>
+                            <li><a>개인정보처리방침</a></li>
+                            <li><a>이메일 무단수집 거부</a></li>
+                            <li><a href="mailto:museum@leeum.org">이메일 문의<span class="contact">museum@leeum.org</span></a></li>
+                            <li><a href="tel:02-2014-6900">전화문의<span class="contact">02-2014-6900</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="i2">
+                        <select name="family">
+                            <option value="" hidden>패밀리 사이트</option>
+                            <option value="http://www.samsungculture.org/">삼성문화재단</option>
+                            <option value="http://www.hoammuseum.org/">호암미술관</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leeum-info-wrap">
+            <div class="container">
+                <div class="leeum-info">
+                    <div class="place">
+                        <h5>리움 미술관</h5><span class="eng">Leeum museum of Art</span>
+                        <address>서울특별시 용산구 이태원로55길 60-16 (한남동)</address>
+                        <address>우) 04348</address>
+                    </div>
+                    <div class="hour">
+                        <h6>영업 시간</h6>
+                        <p><time>10:00 ~ 18:00</time><span>&nbsp;(매표 마감 <time>17 : 30</time>)</span></p>
+                        <p>휴관일 : 매주 월요일, 매년 설날(음력) 및 추석 당일</p>
+                    </div>
+                    <div class="sns-copyright">
+                        <div class="sns">
+                            <a href="https://www.facebook.com/leeumofficial"><img src="../../image/icon_facebook.svg"></a>
+                            <a href="https://www.instagram.com/leeummuseumofart/"><img src="../../image/icon_instagram.svg"></a>
+                            <a href="https://www.youtube.com/channel/UCyXVnJijxHsBrzN9AAZ-Yxw/"><img src="../../image/icon_youtube.svg"></a>
+                        </div>
+                        <p>© Leeum Museum of Art. All Rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,521 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+@import './_collect_mixin.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('conserve_header.png');
+}
+
+main {
+    overflow: hidden;
+
+    @include responsive(tablet-screens) { font-size: 18px; }
+
+    .mobile-view {
+        @include responsive(tablet-screens) {
+            display: none;
+        }
+    }
+
+    h3 {
+        font-size: $h4;
+
+        @include responsive(pc-screens) {
+            font-size: $h3;
+        }
+    }
+
+    .before-after-case-intro {
+        
+        .intro-flex {
+            
+            @include responsive(pc-screens) {
+                @include flex_between();
+            }
+
+            .before-after {
+
+                @include responsive(pc-screens) {
+                    width: 720px; 
+                }
+                
+                ul.angle-select {
+                    @include flex_between();
+                    border-top: 1px solid $bk4;
+                    width: 100%;
+                    
+                    li {
+                        position: relative;
+                        width: calc(100% / 4);
+                        height: 55px;
+                        border-left: 1px solid $bk4;
+                        
+                        @include responsive(tablet-screens) {
+                            height: 65px;
+                        }
+                        
+                        &:last-child {
+                            border-right: 1px solid $bk4;
+                        }
+                        
+                        &::after {
+                            position: absolute;
+                            top: -1px; left: -1px;
+                            content: '';
+                            display: block;
+                            width: calc(100% + 2px); height: 5px;
+                            background-color: #000;
+                            z-index: 1;                            
+                            scale: 0;
+                        }
+                        
+                        span {
+                            @include element_center();
+                            width: 100%;
+                            font-size: $h6;
+                            text-align: center;
+                            cursor: pointer;
+                            
+                            transition: color 0.7s;
+                            
+                            color: $bk3;
+                        }
+                        
+                        &.on {
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
+                            }
+                            
+                            span {
+                                color: #000;
+                                font-weight: 600; // semibold
+                            }
+                        }
+                        
+                    } // li
+                } // ul.angle-select
+                
+                .before-after-img {
+                    aspect-ratio: 24 / 19;
+                    position: relative;
+                    overflow: hidden;
+
+                    @include responsive(pc-screens) {
+                        height: 570px;
+                    }
+                    
+                    .img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        
+                        &.background-img {
+                            background-image: url("../image/conserve_case_after\(0\).png");
+                        }
+                        
+                        &.foreground-img {
+                            background-image: url("../image/conserve_case_before\(0\).png");
+                            width: 50%;
+                        }
+                    }
+                    
+                    .slider {
+                        position: absolute;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        outline: none;
+                        margin: 0;
+                        padding: 0;
+                        transition: width .2s;
+                        cursor: pointer;
+                        @include center;
+                        border-radius: 0;
+
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-moz-range-thumb {
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-ms-thumb {
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-ms-fill-lower {
+                            background: transparent;
+                        }
+                        &::-ms-fill-upper {
+                            background: transparent;
+                        }
+                        &::-ms-track {
+                            color: transparent;
+                            background: transparent;
+                            border: none;
+                        } 
+                    }   
+
+                    .slider-button {
+                        $size: 48px;
+                        pointer-events: none;
+                        position: absolute;
+                        width: $size;
+                        height: $size;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        left: calc(69% - 24px);
+                        top: calc(50% - 24px);
+                        border: 3px solid #fff;
+                        box-shadow: 0 0 12px rgba(51, 51, 51, 50%);
+                        background: linear-gradient(to left, transparent 50%, #fefefe 50%);
+                        @include center();
+                    
+                        &:before {
+                            @include arrow-helper();
+                            border-right: 6px solid #555555;
+                            margin-right: 6px;
+                        }
+
+                        &:after {
+                            @include arrow-helper();
+                            border-left: 6px solid #fefefe;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+
+                  *:before,
+                  *:after {
+                    box-sizing: inherit;
+                }
+            }
+
+            .case-intro {
+                margin-top: 40px;
+
+                @include responsive(pc-screens) {
+                    width: 606px;
+                    margin-top: 80px;
+                }
+                
+                .case-titile {
+
+                    h3 {
+                        font-size: $h3;
+
+                        @include responsive(pc-screens) {
+                            font-size: $h2;
+                        }
+                    }
+                    
+                    h4 {
+                        @include gothic_font(regular, calc(1em + 4px));
+                        margin-top: 5px;
+                        color: $bk2;
+                        
+                        @include responsive(pc-screens) {
+                            margin-top: 15px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                
+                .case-txt {
+                    margin-top: 30px;
+
+                    @include responsive(tablet-screens) {
+                        margin-top: 35px;
+                    }
+
+                    p {
+                        @include content_align(left, 2em);
+                        text-align: justify;
+                        
+                        &:last-child {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .conservation-method-wrap {
+        margin-top: 120px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 200px;
+        }
+        
+        .conservation-method {
+            
+            h3 {
+                text-align: center;
+            }
+
+            .method-intro {
+                margin-top: 30px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 50px;
+                }
+                
+                p {
+                    @include content_align(center, 2em);
+                    margin-top: 20px;
+                    
+                    @include responsive(tablet-screens) {
+                        margin-top: 6px;
+                    }
+                }
+            }
+
+            ul.method-list {
+                margin-top: 80px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 100px;
+                }
+                
+                li {
+                    position: relative;
+                    opacity: 0.2;
+                    
+                    transition: all .5s;
+                    
+                    @include responsive(pc-screens) {
+                        padding: 55px 120px;
+                        box-shadow: inset 0 0 0 1px $bk4;
+                    }
+                    
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &::before,
+                    &::after {
+                        
+                        @include responsive(pc-screens) {
+                            box-sizing: inherit;
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            border: 2px solid transparent;
+                        }
+                    }
+
+                    &::before {
+                        
+                        @include responsive(pc-screens) {
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    
+                    &::after {
+                        
+                        @include responsive(pc-screens) {
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+
+                    &.opacity {
+                        opacity: 1;
+                    }
+
+                    &.border-effect {
+
+                        @include responsive(pc-screens) {
+                            
+                            &::before,
+                            &::after {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            &::before {
+                                border-top-color: $red-brown; 
+                                border-right-color: $red-brown;
+                                transition:
+                                width 0.3s linear,
+                                height 0.3s linear 0.3s;
+                            }
+                            
+                            &::after {
+                                border-bottom-color: $red-brown;
+                                border-left-color: $red-brown;
+                                transition:
+                                border-color 0s linear 0.6s,
+                                width 0.3s linear 0.6s, 
+                                height 0.3s linear 0.9s;
+                            }
+                        }
+                    }
+        
+                    .step-title {
+                        display: flex;
+
+                        .step-num {
+                            width: 65px; height: 35px;
+                            text-align: center;
+                            border-radius: 5px;
+                            background-color: $red-brown;
+
+                            @include responsive(pc-screens) {
+                                width: 80px; height: 45px;
+                            }
+                            
+                            span {
+                                @include gothic_font(semibold, calc(1em + 2px));
+                                line-height: 35px;
+                                color: #fff;
+
+                                @include responsive(pc-screens) {
+                                    line-height: 45px;
+                                }
+                            }
+                        }
+
+                        strong {
+                            @include gothic_font(semibold, calc(1em + 6px));
+                            margin: {
+                                top: auto;
+                                bottom: auto;
+                                left: 10px;
+                            }
+                            color: $red-brown;
+                            
+                            @include responsive(pc-screens) {
+                                margin-left: 15px;
+                                font-size: 28px;
+                            }
+                        }
+                    }
+
+                    .step-txt {
+
+                        p {
+                            @include content_align(justify, 2em);
+                            margin-top: 28px;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                    
+                    .step-img {
+                        @include flex_between();
+                        width: 550px;
+                        margin-top: 30px;
+                        
+                        @include responsive(tablet-screens) {
+                            width: 100%;
+                            margin-top: 40px;
+                        }
+                        
+                        @include responsive(pc-screens) {
+                            width: 1160px;
+                            margin-top: 50px;
+                            column-gap: 30px;
+                        }
+                        
+                        img {
+                            width: 270px;
+                            border-radius: 5px;
+                            
+                            @include responsive(tablet-screens) {
+                                width: calc(560px / 1160px) * 100%;
+                            }
+                            
+                            @include responsive(pc-screens) {
+                                width: 100% !important;
+                                margin-right: 0 !important;
+                            }
+                        }
+
+                        &.one-img {
+                            width: 100%;                                
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                
+                .arrow {
+                    display: block;
+                    width: 30px;
+                    margin: 37px auto;
+                    filter: $svg-redbrown;
+                    opacity: 0;
+                    transform: translateY(-100%);
+
+                    transition: opacity 1.5s .8s, transform 1.5s .8s;
+
+                    @include responsive(tablet-screens) {
+                        width: 35px;
+                    }
+
+                    @include responsive(pc-screens) {
+                        width: 40px;
+                        margin-top: 80px;
+                        margin-bottom: 80px;
+                    }
+
+                    &:last-child {
+                        display: none;
+                    }
+
+                    &.on {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            } // ul.method
+        } // conservation-method
+    } // conservation-method-wrap
+
+
+    section.movePage {
+        @include move_page();
+
+        .movePage-wrap {
+
+            .prev {
+                visibility: hidden;
+            }
+        }
+    }
+} // main
+
+footer {
+    @include footer();
+}

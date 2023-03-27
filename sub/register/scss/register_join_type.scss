@@ -1,0 +1,188 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import './register.scss';
+
+    .container{
+        overflow-x: hidden;
+
+        .flex{
+            margin-top: 120px;
+
+            @include responsive(pc-screens) {
+                @include flex_between();
+                margin-top: 0;
+            }
+            .type {
+                margin-top: 30px;
+                padding: 50px 15px;
+                text-align: center;
+                transition: .3s;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 50px;
+                }
+
+                &:first-child {
+                    border: 1px solid $dark-brown;
+                    margin-top: 100px;
+                    
+                    &:hover {
+                        background: $dark-brown;
+                        box-shadow: rgb(110 59 59 / 50%) 0px 30px 40px;
+
+                        button {
+                            color: $dark-brown !important;
+                        }
+                    }
+
+                    @include responsive(pc-screens) {
+                        margin-top: 50px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    border: 1px solid $red-brown;
+                    
+                    &:hover {
+                        background: $red-brown;
+                        box-shadow: rgb(172 63 33 / 50%) 0px 30px 40px;
+
+                        button {
+                            color: $red-brown !important;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    border: 1px solid $yellow-brown;
+
+                    &:hover {
+                        background: $yellow-brown;
+                        box-shadow: rgb(190 106 21 / 50%) 0px 30px 40px;
+
+                        button {
+                            color: $yellow-brown !important;
+                        }
+                    }
+                }
+
+                &:hover {
+                    * {
+                        color: #fff !important;
+                    }
+                    button {
+                        background: #fff !important;
+                    }
+                }
+
+                @include responsive(pc-screens) {
+                    width: 31.71428571428571%;
+                    padding: 80px 20px;
+                }
+
+                strong{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                    @include gothic_font(semibold, 24px);
+                    span {
+                        margin-left: 5px;
+                        @include gothic_font(regular, 22px);
+                        color: $bk1;
+
+                    }
+
+                    &:last-child {
+                        @include gothic_font(medium, 18px);
+                    }
+                }
+
+                .fee{
+                    margin-bottom: 30px;
+                    @include gothic_font(bold, 22px);
+
+                    &.free {
+                        color: $dark-brown;
+                    }
+                    
+                    &.hun {
+                        color: $red-brown;
+                    }
+
+                    &.three-hun {
+                        color: $yellow-brown;
+                    }
+                }
+
+                
+                p {
+                    margin-bottom: 30px;
+                    @include content_align(center, 1.8em);
+                    color: $bk2;
+                }
+
+                .button {
+                    &.origin{
+                        a {
+                            width: 100%;
+                            button {
+                                @include gothic_font(medium, 18px);
+                                width: 100%;
+                                padding: 10px;
+                                border-radius: 5px;
+                                color: white;
+                                background-color: $dark-brown;
+                                transition: .3s;
+
+                                
+                            }
+                        }
+                            
+                    }
+
+                    &.friends {
+                        .request {
+                            display: flex;
+                            a{
+                                width: 100%;
+                                button{
+                                    @include gothic_font(medium, 18px);
+                                    width: 95%;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    color: white;
+                                    background-color: $red-brown;
+                                    transition: .3s;
+                                
+                                    &:hover {
+                                        box-shadow: rgb(172 63 33 / 50%) 0px 18px 25px -10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.family {
+                        a {
+                            width: 100%;
+                            button {
+                                @include gothic_font(medium, 18px);
+                                width: 100%;
+                                padding: 10px;
+                                border-radius: 5px;
+                                color: white;
+                                background-color: $yellow-brown;
+                                transition: .3s;
+                                
+                                &:hover {
+                                    box-shadow: rgb(190 106 21 / 50%) 0px 18px 25px -10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

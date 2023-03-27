@@ -1,0 +1,94 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('antique_header.jpg');
+}
+
+main {
+    
+    section.filter {
+        @include section_filter();
+
+        .filter-wrap {
+            @include filter_wrap();
+            
+            .speed-search {
+                @include speed_search();
+            }
+
+            .detail-search-wrap {
+                @include detail_search();
+
+                .detail-search {
+                    display: block;
+
+                    form[name=detail] .opt-box {
+
+                        .type {
+                            
+                            @include responsive(pc-screens) {
+                                @include flex_between_center();
+                                width: 58.18181818181818%;
+                            }
+
+                            ul.opt li {
+                                width: 25%;
+                            }
+                        }
+        
+                        .space {
+        
+                            @include responsive(pc-screens) {
+                                @include flex_between_center();
+                                width: 32.7272727%;
+                            }
+        
+                            ul.opt {
+        
+                                @include responsive(pc-screens) {
+                                    width: 72.22222222222222%;
+                                }
+        
+                                h6 {
+                                    width: calc(100% - 72.22222222222222%);
+                                }
+                                
+                                li {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.itemList {
+        margin-top: 80px;
+
+        .list-control {
+            @include list_control();
+        }
+
+        .item-box {
+            @include itemList_box();
+        }
+    }
+
+    section.paging {
+        @include paging();
+    }
+}
+
+footer {
+    @include footer();
+}

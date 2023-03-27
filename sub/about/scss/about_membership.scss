@@ -1,0 +1,805 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+@import './_about_mixin.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('membership_header.png');
+}
+
+main {
+    overflow-x: hidden;
+    @include responsive(tablet-screens) { font-size: 20px; }
+    
+    .mobile-view {
+        @include responsive(tablet-screens) {
+            display: none;
+        }
+    }
+
+    .pc-br {
+        display: none;
+
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+    
+    h3 { 
+        font-size: $h3;
+        text-align: center;
+        
+        @include responsive(pc-screens) {
+            font-size: $h2;
+        }
+    }
+    
+    @include tab_menu();
+
+    #tabcon-01.con-box {
+        display: block;
+    }
+    
+    .tabmenu-wrap{
+
+        .tab-con {
+            .con-box{
+                display: block;
+            }
+        }
+    }
+
+    .membership-wrap,
+    .gift-membership-wrap {
+        
+        .table {
+            margin-top: 40px;
+            
+            @include responsive(pc-screens) {
+
+                margin-top: 80px;
+            }
+            
+            .tr {
+    
+                @include responsive(pc-screens) {
+                    @include flex_between();
+                }
+                
+                .thead {
+                    @include gothic_font(semibold, calc(1em + 2px));
+                    padding: 20px;
+                    border-top: 2px solid $bk5;
+                    background-color: $bk6;
+                    
+                    @include responsive(pc-screens) {
+                        width: calc(200px / 1400px) * 100%;
+                        font-size: $h4;
+                        text-align: center;
+                        padding: {
+                            top: 40px;
+                            left: 0;
+                        }
+                        background-color: transparent;
+                    }
+                    
+                }
+                
+                .tbody {
+                    @include flex_between_center();
+                    flex-wrap: wrap;
+                    border-top: 1px solid $bk5;
+                    
+                    @include responsive(pc-screens) {
+                        width: calc(1200px / 1400px) * 100%;
+                        border-top: 2px solid $bk5;
+                        border-left: 1px solid $bk5;
+                    }
+                    
+                    img {
+                        width: 130px;
+                        
+                        @include responsive(pc-screens) {
+                            width: 280px;
+                        }
+                    }
+                    
+                    > div {
+                        padding: {
+                            top: 20px;
+                            bottom: 20px;
+                        }
+                        text-align: center;
+                        line-height: 2em;
+                        
+                        @include responsive(pc-screens) {
+                            padding: {
+                                top: 50px;
+                                bottom:50px;
+                            }
+                            line-height: 44px;
+                        }
+                        
+                        .light {
+                            color: $bk2;
+                        }
+                        
+                        .light-s {
+                            display: block;
+                            font-size: calc(1em - 2px);
+                            color: $bk2;
+                            margin-top: 5px;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 10px;
+                            }
+                        }
+    
+                        &.td1, 
+                        &.td2 {
+                            width: 50%;
+    
+                            .card-title {
+                                @include gothic_font(semibold, calc(1em + 2px));
+                                display: block;
+                                margin-top: 22px;
+                                
+                                @include responsive(pc-screens) {
+                                    margin-top: 40px;
+                                    font-size: $h4;
+                                }
+                            }
+    
+                            .card-txt {
+                                margin-top: 10px;
+                                font-size: 0.9em;
+                                @include content_align(center, 1.5em);
+                                
+                                @include responsive(pc-screens) {
+                                    margin-top: 15px;
+                                }
+                            }
+                            
+                            .card-bt {
+                                @include bt-hover($bk5, #000, $red-brown, #fff);
+                                height: 44px;
+                                margin: 26px auto 0;
+
+                                @include responsive(tablet-screens) {
+                                    height: 50px;
+                                    margin-top: 50px;
+                                }
+
+                                a {
+                                    span {
+                                        @include gothic_font(medium, 0.9em);
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &.td2 {
+                            border-left: 1px solid $bk5;
+                            span {
+                                vertical-align: top;
+                            }
+                        }
+                        
+                        &.td3 {
+                            width: 100%;
+                            border-top: 1px solid $bk5;
+                        }
+
+                        p {
+                            line-height: 22px;
+
+                            &:nth-child(2) {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &:first-child {
+
+                    .tbody {
+
+                        .td2 {
+                            border-left: 0;
+                        }
+                    }
+                } 
+
+                &:last-child {
+                    border-bottom: 1px solid $bk4;
+                    
+                    @include responsive(pc-screens) {
+                        border-bottom: 2px solid $bk4;
+                    }
+                }
+            }
+        }
+    }
+
+    .membership-wrap {
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px;
+        }
+
+        .membership {
+            
+                .table {
+                    
+                    .tbody {
+                        
+                        > div {
+
+                            &.td1, 
+                            &.td2 {
+                                
+                                .card-bt {
+                                    width: 150px;
+
+                                    @include responsive(tablet-screens) {
+                                        width: 250px;
+                                    }
+                                }
+                            }
+                            
+                            &.td1 {
+                                .fee {
+                                    color: $red-brown;
+                                }
+                            }
+                            
+                            &.td2 {
+                                border-left: 1px solid $bk4;
+
+                                .fee {
+                                    color: $yellow-brown;
+                                }
+
+                                .card-bt {
+
+                                    a::before {
+                                        background-color: $yellow-brown;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+
+    .gift-membership-wrap {
+        margin-top: 120px;
+
+        @include responsive(pc-screens) {
+            margin-top: 280px;
+        }
+
+        .gift-membership {
+    
+            .table {
+                
+                .tbody {
+                    
+                    > div {
+
+                        &.td1, 
+                        &.td2 {
+                            
+                            .card-bt {
+                                width: 160px;
+    
+                                @include responsive(tablet-screens) {
+                                    width: 250px;
+                                }
+                            }
+
+                            .fee {
+                                color: $red-brown;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .gift-detail {
+                margin-top: 80px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 240px;
+                }
+
+                h5 {                    
+                    @include responsive(pc-screens) {
+                        font-size: $h4;
+                    }
+                }
+
+                ul {
+                    margin-top: 40px;
+                    
+                    li {
+                        padding: 30px 0;
+                        border-top: 1px solid $bk4;
+                        
+                        @include responsive(pc-screens) {
+                            display: flex;
+                            column-gap: 40px;
+                            padding: 60px 0;
+                        }
+
+                        h6 {
+                            width: 160px;
+
+                            @include responsive(pc-screens) {
+                                font-size: $h5;
+                            }
+                        }
+
+                        strong {
+                            @include gothic_font(semibold, calc(1em + 6px));
+
+                            @include responsive(pc-screens) {
+                                width: 280px;
+                                margin-left: 40px;
+                            }
+
+                        }
+
+                        .detail-txt {
+                            @include content_align();
+                            margin-top: 10px;
+                            
+                            @include responsive(pc-screens) {
+                                width: 1120px;
+                                margin-top: 0;
+                                margin-left: 0;
+                            }
+                            
+                            p {
+                                margin-top: 10px;
+                                
+                                @include responsive(pc-screens) {
+                                    margin-top: 20px;
+                                }
+                                
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+
+                                .light-s {
+                                    font-size: calc(1em - 2px);
+                                    color: $bk2;
+                                }
+
+                                a {
+                                    color: $bk1;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        
+                        &:first-child {
+
+                            p {
+                                padding-left: 11px;
+                                background: {
+                                    image: url(../image/icon_bullet_dot.svg);
+                                    repeat: no-repeat;
+                                    position: left 0.8em;
+                                    size: 2px;
+                                }
+
+                                .light {
+                                    color: $bk2;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+
+                            div {
+                                
+                                .refund-box {
+                                    margin-top: 30px;
+                                    background: $bk6;
+                                    padding: 5px 10px;
+                                    border-radius: 5px;
+
+                                    @include responsive(pc-screens) {
+                                        margin-top: 40px;
+                                    }
+
+                                    div {
+                                        margin: 20px;
+
+                                        @include responsive(pc-screens) {
+                                            margin: 40px;
+                                        }
+
+                                        p {
+                                            display: block;
+                                            @include content_align(justify);
+                                            margin-top: 10px;
+                                            padding-left: 11px;
+                                            background-image: url(../image/icon_bullet_dot.svg);
+                                            background-repeat: no-repeat;
+                                            background-position: left 0.8em;
+                                            background-size: 2px;
+
+                                            @include responsive(pc-screens) {
+                                                margin-top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.corporate-member-wrap {
+        margin-top: 100px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px * 2;
+        }
+
+        .corporate-member {
+            @include out_container();
+            position: relative;
+            height: 400px;
+            color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            background: {
+                image: url(../image/membership_corporate.png);
+                repeat: no-repeat;
+                position: -507px -429px;
+                size: calc(951px / 350px) * 100%;
+            }
+            
+            @include responsive(pc-screens) {
+                @include in_container();
+                position: relative;
+                height: 300px;
+                background: {
+                    image: url(../image/membership_corporate_pc.png);
+                    position: 0;
+                    size: 1527px;
+                }
+            }
+            
+            &::before {
+                @include overlay_bk(1);
+                background: linear-gradient(#000 0%, transparent);
+                
+                @include responsive(pc-screens) {
+                    background: none;
+                }
+            }
+            
+            .back-cover {
+                @include overlay_bk(0.6);
+                
+                @include responsive(pc-screens) {
+                    background-color: rgba(0, 0, 0, 0.4);   
+                }
+            }
+
+            .corporate-txt {
+                
+                @include responsive(pc-screens) {
+                    margin-left: 120px;
+                }
+
+                h3 {
+                    margin-top: 50px;
+                    font-size: calc(1em + 10px);
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 65px;
+                        font-size: 36px;
+                        text-align: left;
+                    }
+                }
+
+                p {
+                    margin-top: 30px;
+                    font-size: 18px;
+                    line-height: 2em;
+                    text-align: center;
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 40px;
+                        font-size: 20px;
+                        text-align: left;
+                    }
+                }
+            }
+            
+            .corporate-bt {
+                @include bt-hover(#fff, #fff, #fff, #000);
+                position: absolute;
+                right: 50%; bottom: 50px;
+                width: 150px; height: 50px;
+                transform: translateX(50%);
+
+                @include responsive(tablet-screens) {
+                    width: 160px; height: 56px;
+                }
+                
+                @include responsive(pc-screens) {
+                    right: 120px; bottom: 44px;
+                    transform: translateX(0);
+                }
+
+                a {
+
+                    span {
+
+                        @include responsive(tablet-screens) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .associate-wrap {
+        margin-top: 130px;
+
+        @include responsive(pc-screens) {
+            margin-top: 260px;
+        }
+        
+        .associate {
+
+            ul.associate-con {
+                margin-top: 40px;
+                
+                @include responsive(tablet-screens) {
+                    @include flex_between();
+                    flex-wrap: wrap;
+                }
+                
+                @include responsive(pc-screens) {
+                    margin-top: 100px;
+                }
+
+                li {
+                    @include flex_between_center();
+                    width: 100%; 
+                    height: 158px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    
+                    @include responsive(tablet-screens) {
+                        width: 48%; 
+                        height: 175px;
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        width: 680px; 
+                        height: 260px;
+                        margin-bottom: 40px;
+                        overflow: hidden;
+                        
+                    }
+
+                    .store-img {
+                        width: 45%;
+                        height: 100%;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        overflow: hidden;
+                        
+                        @include responsive(tablet-screens) {
+                            width: 50%;
+                        }
+
+                        img {
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    
+                    .store-txt-wrap {
+                        display: flex;
+                        align-items: center;
+                        width: 55%;
+                        height: 100%;
+                        border: 2px dashed #ddd;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        border-left: 0;
+
+                        @include responsive(tablet-screens) {
+                            width: 50%;
+                        }
+
+                        .store-txt {
+                            width: 100%;
+                            padding-left: 20px;
+                            
+                            @include responsive(pc-screens) {
+                                padding-left: 40px;
+                            }
+
+                            p {
+                                @include gothic_font(medium);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 20px;
+                                }
+                            }
+                            
+                            b {
+                                display: flex;
+                                margin-top: 8px;
+                                font-size: 22px;
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 36px;
+                                }
+                                
+                                .red {
+                                    color: #f00;
+                                    margin-right: 5px;
+                                }
+                            }
+                            
+                            address,
+                            .tel {
+                                font-size: 14px;
+                            }
+                            
+                            address {
+                                display: flex;
+                                margin-top: 16px;
+                                @include gothic_font(medium, 14px);
+                                
+                                @include responsive(pc-screens) {
+                                    margin-top: 36px;
+                                    font-size: 16px;
+                                }
+                            }
+                            
+                            .tel {
+                                margin-top: 8px;
+    
+                                @include responsive(pc-screens) {
+                                    margin-top: 10px;
+                                    font-size: 16px;
+                                }
+    
+                                img {
+                                    width: 12px;
+                                    margin-right: 8px;
+                                }
+                            }   
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    .faq-wrap {
+        margin-top: 140px;
+
+        @include responsive(pc-screens) {
+            margin-top: 330px;
+        }
+
+        ul.faq-list {
+            margin-top: 60px;
+
+            @include responsive(pc-screens) {
+                margin-top: 120px;
+            }
+
+            li {
+                border-bottom: 1px solid $bk5;
+                padding: 0 10px;
+        
+                @include responsive(pc-screens) {
+                    padding: 30px 20px;
+                }
+                
+                &:first-child {
+                    border-top: 1px solid $bk5;
+                }
+                
+                .q-box {
+                    @include flex_between_center();
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    cursor: pointer;
+                    
+                    @include responsive(pc-screens) {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                    
+                    p {
+                        @include gothic_font(semibold, 18px);
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        
+                        @include responsive(pc-screens) {
+                            font-size: 22px;
+                        }
+    
+                        b {
+                            font-size: 120%;
+                            margin-right: 5px;
+                            color: $yellow-brown;
+                        }
+                    }
+
+                    .dropdown {
+                        @include icon_rotate(180deg);
+                        height: 8px;
+                        
+                        @include responsive(pc-screens){
+                            height: 10px;
+                        }
+                    }
+                }
+                
+                .a-box {
+                    display: none;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    background-color: $bk6;
+            
+                    @include responsive(pc-screens) {
+                        padding: 40px;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+                    }
+            
+            
+                    p {
+                        @include content_align(justify, 1.8em);
+                    }
+
+                    .shortcut {
+                        @include gothic_font(semibold, 1em);
+                        color: $yellow-brown;
+            
+                        img {
+                            margin-left: 10px;
+                            height: 12px;
+                            filter: $svg-yellowbrown;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    @include footer();
+}

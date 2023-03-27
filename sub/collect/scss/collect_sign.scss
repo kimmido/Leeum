@@ -1,0 +1,139 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('sign_header.jpg');
+}
+
+main {
+
+    section.search-wrap {
+        @include section_filter();
+
+        .search-box {
+            @include filter_wrap();
+
+            .speed-search {
+                @include speed_search();
+            }
+        }
+    }
+
+    section.itemList-wrap {
+        margin-top: 80px;
+
+        .itemList {
+
+            .list-control {
+                @include list_control();
+            }
+    
+            ul.item-box {
+                @include itemList_box();
+                position: relative;
+                overflow: hidden;
+    
+                li.item {
+                    width: 100%;
+
+                    transition: all .3s;
+    
+                    @include responsive(tablet-screens) {
+                        width: 45%;
+                    }
+    
+                    @include responsive(pc-screens) {
+                        width: 440px;
+
+                        &:hover {
+
+                            a {
+
+                                .i-pic {
+
+                                    img {
+                                        transform: scale(1.3);
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .heart {
+                        @include icon_heart();
+                    }
+    
+                    a {
+        
+                        .i-pic {
+                            position: relative;
+                            height: calc(195px / 350px) * 100%;
+
+                            img {
+                                transition: transform .3s;
+                            }
+    
+                            .youtube-icon {
+                                @include element_center();
+                                width: calc(38px / 350px) * 100%;
+                                aspect-ratio: 38 / 27;
+                                background-image: url(../../../image/icon_youtube_black.svg);
+                                background-repeat: no-repeat;
+                                transition: all .3s;
+                                
+                                @include responsive(pc-screens) {
+                                    width: 63px; height: 45px;
+                                }
+                            }
+                        }
+    
+                        .i-des {
+
+                            strong {
+                                width: 100%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+    
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .more-btn {
+                position: relative;
+                top: -60px;
+                text-align: center;
+                z-index: 2;
+                
+                button {
+                    @include gothic_font(semibold, 14px);
+                    width: 50%; height: 40px;
+                    border: 1px solid $bk2;
+    
+                    @include responsive(pc-screens) {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    section.paging {
+        @include paging();
+    }
+}
+
+footer {
+    @include footer();
+}

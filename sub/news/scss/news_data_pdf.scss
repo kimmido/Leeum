@@ -1,0 +1,196 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('data_pdf_header.jpg');
+}
+
+main {
+    section.search-wrap {
+        @include section_filter();
+
+        .search-box {
+            @include filter_wrap();
+
+            .speed-search {
+                @include speed_search();
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: 0;
+
+                form[name=keyword] input {
+                    width: 100%;
+
+                    @include responsive(pc-screens) {
+                        width: 84%;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .list-control {
+            @include list_control();
+            margin-top: 40px;
+            margin-bottom: 60px;
+
+            @include responsive(pc-screens) {
+                margin-top: 80px;
+            }
+        }
+
+        .flex {
+
+            @include responsive(tablet-screens) {
+                @include flex_between();
+                flex-wrap: wrap;
+            }
+            .workbook {
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+
+                @include flex_between();
+                margin-bottom: 40px;
+
+                @include responsive(tablet-screens) {
+                    width: 48%;
+                    margin-bottom: 60px;
+                }
+                
+                > a {
+                    width: 50%;
+                }
+                .w-img {
+
+                    img {
+                        
+                        width: 100%;
+
+                        @include responsive(pc-screens) {
+                            width: 320px;
+                        }
+                    }
+                }
+
+                .text-pdf {
+                    display: flex;
+                    align-content: space-between;
+                    flex-wrap: wrap;
+                    position: relative;
+                    width: 42%;
+
+                    @include responsive(tablet-screens) {
+                        margin: 20px 0;
+                    }
+
+                    .text {
+                        width: 100%;
+
+                        strong {
+                            margin-bottom: 10px;
+                            font-size: $h6;
+                            line-height: 1.5em;
+
+                            @include responsive(tablet-screens) {
+                                font-size: $h5;
+                            }
+
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                            }
+                        }
+
+                        p {
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                            color: $bk2;
+                        }
+
+                        .preview {
+                            display: none;
+
+                            @media screen and (min-width:500px) {
+                                display: block;
+                                margin: 20px 0;
+                                @include content_align(justify, 1.8em);
+                                font-size: 14px;
+                            }
+
+                            @include responsive(pc-screens) {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    .down-img {
+                        width: 100%;
+                        text-align: center;
+                        
+                        a {
+                            padding: 10px 15px;
+                            width: 100%;
+                            border: 1px solid $bk4;
+                            border-radius: 5px;
+                            font-size: 15px;
+                            color: $bk2;
+                            transition:  all .3s;
+
+                            &:hover {
+                                color: white;
+                                background: $dark-brown;
+                                box-shadow: rgb(110 59 59 / 50%) 0px 18px 25px -10px;
+                                transition: all 0.4s;
+                            }
+
+                            &:nth-child(2) {
+                                margin-top: 15px;
+                            }
+
+                            img {
+                                display: none;
+                                height: 12px;
+                                margin-right: 6px;
+
+                                &:hover {
+                                    filter: none;
+                                }
+
+                                @media screen and (min-width:400px) {
+                                    display: inline-block;
+                                }
+                            }
+
+                            span br {
+                                @media screen and (min-width:590px) {
+                                    display: none;
+                                }
+                                @include responsive(tablet-screens) {
+                                    display: block;
+                                }
+                                @media screen and (min-width:1068px) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.paging {
+        @include paging();
+    }
+}
+
+footer {
+    @include footer();
+}

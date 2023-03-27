@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="김미도">
+    <meta name="description" content="리움미술관 이용에 꼭 필요한 정보들을 모아 알려드립니다.">
+    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-jp-dynamic-subset.css" as="style" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="./css/about_guide.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script defer type="text/javascript" src="../../js/common.js"></script>
+    <script defer type="text/javascript" src="../../js/swiper.js"></script>
+    <script defer type="text/javascript" src="../../js/dropdown.js"></script>
+    <script defer type="text/javascript" src="../../js/side_tab.js"></script>
+    <script defer type="text/javascript" src="./js/tab_menu.js"></script>
+    <title>관람 안내 | Leeum</title>
+</head>
+<body>
+    <header>
+        <div class="mobile-menu-popup hidden">
+            <div class="window">
+                <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
+                <div class="popup">
+                    <div class="bk-menu">
+                        <a href="../../index.html"><img src="../../image/logo_leeum_typo.svg" alt="메인으로 이동" class="logo"></a>
+                        <ul class="icon-box">
+                            <li><a href="../register/register_login.html"><img src="../../image/icon_user.svg">MY</a></li>
+                            <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="../../image/icon_reserve.svg">예매</a></li>
+                            <li><a href="https://leeumstore.org/"><img src="../../image/icon_store.svg">스토어</a></li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="search" placeholder="검색어를 입력하세요" class="search">
+                            <button type="button" class="search-btn">
+                        </div>
+                    </div>
+                    <div class="wh-menu">
+                        <div class="m1">
+                            <div class="group">
+                                <h6>리움</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                <li><a href="../about/about_map.html">오시는 길</a></li>
+                                <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                            </ul>
+                        </div>
+                        <div class="m2">
+                            <div class="group">
+                                <h6>전시</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                            </ul>
+                        </div>
+                        <div class="m3">
+                            <div class="group">
+                                <h6>소장품</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                            </ul>
+                        </div>
+                        <div class="m4">
+                            <div class="group">
+                                <h6>프로그램</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                            </ul>
+                        </div>
+                        <div class="m5">
+                            <div class="group">
+                                <h6>작가</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../artist/artist.html">작가</a></li>
+                            </ul>
+                        </div>
+                        <div class="m6">
+                            <div class="group">
+                                <h6>소식</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../news/news_notice.html">공지사항</a></li>
+                                <li><a href="../news/news_data.html">자료</a></li>
+                                <li><a href="../news/news_faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="logo-menu-wrap">
+        <div class="container">
+            <div class="logo-menu">
+                <div class="logo">
+                    <a href="../../index.html"></a>
+                </div>
+                <div class="mobile-menu">
+                    <img src="../../image/icon_mobile_menu.svg" alt="모바일 메뉴">
+                </div>
+                <nav class="pc-menu">
+                    <div class="gnb one">
+                        <ul>
+                            <li>
+                                <a href="../about/about_intro.html" class="group m1">리움</a>
+                                <ul class="opt hidden">
+                                    <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                    <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                    <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                    <li><a href="../about/about_map.html">오시는 길</a></li>
+                                    <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../exhibition/exhibition_now.html" class="group m2">전시</a>
+                                <ul class="opt hidden">
+                                    <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                    <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../collect/collect_antique.html" class="group m3">소장품</a>
+                                <ul class="opt hidden">
+                                    <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                    <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                    <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                    <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../program/program_now.html" class="group m4">프로그램</a>
+                                <ul class="opt hidden">
+                                    <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                    <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../artist/artist.html" class="group">작가</a></li>
+                            <li>
+                                <a href="../news/news_notice.html" class="group m6">소식</a>
+                                <ul class="opt hidden">
+                                    <li><a href="../news/news_notice.html">공지사항</a></li>
+                                    <li><a href="../news/news_data.html">자료</a></li>
+                                    <li><a href="../news/news_faq.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gnb two">
+                        <ul class="mini-menu">
+                            <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움 스토어</a></li>
+                            <li>
+                                <div class="lang">
+                                    <img src="../../image/icon_language.svg">KOR<img src="../../image/icon_arrow.svg" class="dropdown">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="icon-menu">
+                            <li><a href="../register/register_login.html" class="login"></a></li>
+                            <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do" class="reserve"></a></li>
+                            <li><a class="search"></a>
+                                <div class="search-box hidden">
+                                    <input type="search" placeholder="검색어를 입력하세요" class="searchbar">
+                                    <button type="button" class="search-btn">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lang-opt">
+                            <li><a class="on">KOR</a></li>
+                            <li><a>ENG</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="sub-title">
+        <p class="eng">guide</p>
+        <h2 class="kor">관람 안내</h2>
+    </div>
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li class="home"><a href="/../../index.html"></a></li>
+                <li class="loc">
+                    <div class="step">
+                        <a href="../about/about_intro.html">리움</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                    </div>
+                    <ul class="opt">
+                        <li><a href="../about/about_intro.html" class="on">리움</a></li>
+                        <li><a href="../exhibition/exhibition_now.html">전시</a></li>
+                        <li><a href="../collect/collect_antique.html">소장품</a></li>
+                        <li><a href="../program/program_now.html">프로그램</a></li>
+                        <li><a href="../artist/artist.html">작가</a></li>
+                        <li><a href="../news/news_notice.html">소식</a></li>
+                    </ul>
+                </li>
+                <li class="loc">
+                    <div class="step">
+                        <a href="../about/about_guide.html">관람 안내</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                    </div>
+                    <ul class="opt">
+                        <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                        <li><a href="../about/about_guide.html" class="on">관람 안내</a></li>
+                        <li><a href="../about/about_facility.html">시설 안내</a></li>
+                        <li><a href="../about/about_map.html">오시는 길</a></li>
+                        <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="tabmenu-wrap">
+            <div class="container">
+                <div class="tab-nav">
+                    <span class="nav on"><a href="#guide">관람요금 및 시간</a></span>
+                    <span class="nav"><a href="#floor">층별안내</a></span>
+                    <span class="nav"><a href="#did">21세기 리움</a></span>
+                </div>
+            </div>
+            <div class="tab-con">
+                <section id="guide" class="con-box fee-time-wrap">
+                    <h2>관람요금 및 시간</h2>
+                    <div class="container">
+                        <div class="fee-time">
+                            <div class="time">
+                                <h3><span class="br-bar"></span>관람 시간</h3>
+                                <div class="time-txt">
+                                    <p>화 - 목요일 오전 10:00 - 오후 4:00 <b>(매표 마감 17:30)</b></p>
+                                    <span>※ 휴관일 : 매주 월요일, 매년 설날 및 추석 당일</span>
+                                </div>
+                            </div>
+                            <div class="fee">
+                                <h3><span class="br-bar"></span>관람 요금</h3>
+                                <table>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>대상</th>
+                                            <th>구름산책자</th>
+                                            <th>상설전<span> · </span><br>상설기획전</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>일반 <span>(만 25세~64세)</span></td>
+                                            <td>12,000원</td>
+                                            <td rowspan="7">무료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>청년 <span>(만 19세~24세)</span> 및 대학(원)생</td>
+                                            <td>6,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>청소년 <span>(만 7세~18세)</span></td>
+                                            <td>6,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>시니어 <span>(만 65세 이상)</span></td>
+                                            <td>6,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>미취학 아동 <span>(만 6세까지)</span></td>
+                                            <td rowspan="3">무료</td>
+                                        </tr>
+                                        <tr>
+                                            <td>장애인, 국가유공자 <span>(동반 1인까지)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>문화누리카드 소지자</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ticket-wrap">
+                                <div class="ticket-info">
+                                    <h3><span class="br-bar"></span>예매 안내</h3>
+                                    <ul>
+                                        <li>개인 예매는 관람일 2주 전까지만 가능합니다. <span>(인당 4매까지 가능)</span></li>
+                                        <li>예매를 하지 않고 방문하시는 경우, 현장 발권 후 입장이 가능합니다.</li>
+                                        <li>안전하고 쾌적한 관람을 위하여 반드시 예약 사항을 지켜 주시기 바라며, 방문하지 않으시는 경우에는 다른 분들의 방문을 위해 예약 취소를 부탁드립니다.</li>
+                                        <li>매월 마지막주 수요일 ‘문화가 있는날’에는 <b>50% 할인</b>된 가격에 관람이 가능합니다. <span>(중복할인 불가)</span></li>
+                                    </ul>
+                                </div>
+                                <div class="ticketing">
+                                    <a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="../../image/icon_reserve.svg" alt="티겟 아이콘"> 예매하기</a>
+                                </div>
+                            </div>
+                            <div class="please-note">
+                                <h3><span class="br-bar"></span>관람 시 유의사항</h3> 
+                                <div class="note-flex">
+                                    <div class="col-line">
+                                        <span class="line1"></span>
+                                        <span class="line2"></span>
+                                        <span class="line3"></span>
+                                        <span class="line4"></span>
+                                    </div>
+                                    <div class="note-group">
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_hand.svg" alt="손">
+                                                    <img src="./image/icon_no.svg" alt="금지 ">
+                                                </div>
+                                                <p>
+                                                    작품을 손으로 <br class="m-br">
+                                                    만지지 마세요.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_dog_and_food.svg" al t="강아지와 음식">
+                                                    <img src="./image/icon_no.svg" alt="금지">
+                                                </div>
+                                                <p>
+                                                    음식물 반입과 애완동물 <br class="m-br">
+                                                    출입은 <br class="pc-br">
+                                                    금지되어 있습니다.<span>(안내견 제외)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_keep.svg" alt="자물쇠">
+                                                </div>
+                                                <p>
+                                                    소지품과 코트는 <br class="m-br">
+                                                    물품보관함에 <br class="pc-br">
+                                                    맡겨 주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="note-group">
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_noise.svg" alt="소음">
+                                                    <img src="./image/icon_no.svg" alt="금지">
+                                                </div>
+                                                <p>
+                                                    타 관람객의 관람을 <br class="m-br">
+                                                    방해하지 않도록 <br class="pc-br">
+                                                    조용히 <br class="m-br">
+                                                    관람해 주세요.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_rain.svg" alt="빗방울">
+                                                    <img src="./image/icon_no.svg" alt="금지">
+                                                </div>
+                                                <p>우천, 설천시 바닥이 미끄러운 관계로 야외 데크 진입이 제한될 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="note-item">
+                                            <div class="note-con">
+                                                <div class="note-img">
+                                                    <img src="./image/icon_children.svg" alt="어린이">
+                                                </div>
+                                                <p>
+                                                    어린이를 동반할 경우 <br class="m-br">
+                                                    보호자 분의 <br class="pc-br">
+                                                    각별한 주의를 <br class="m-br">
+                                                    부탁드립니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="floor" class="con-box vr-floor-info-wrap">
+                    <h2>층별안내</h2>
+                    <div class="container">
+                        <section class="floor-info">
+                            <div class="side-tab m1">
+                                <div class="floor-select-group">
+                                    <div class="group-title">
+                                        <h4>M1 고미술<span>상설전</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown">
+                                    </div>
+                                    <ul class="tab-wrap group-option">
+                                        <li class="tab selected"><b>4F</b><span class="floor-titile">푸른빛 문양 한 점</span>   </li>
+                                        <li class="tab"><b>3F</b><span class="floor-titile">흰빛의 여정</span></li>
+                                        <li class="tab"><b>2F</b><span class="floor-titile">감상과 취향</span></li>
+                                        <li class="tab"><b>1F</b><span class="floor-titile">권위와 취향, 화려함의 세계</span></li>
+                                        <li class="tab"><b>B1</b><span class="floor-titile">로비</span></li>
+                                    </ul>
+                                </div>
+                                <div class="floor-con-group">
+                                    <ul class="side-con-box floor-img">
+                                        <li class="view"><img src="./image/guide_floor_m1(1).png" alt="청자 전시장"></li>
+                                        <li><img src="./image/guide_floor_m1(2).png" alt="백자 전시장"></li>
+                                        <li class="tab"><img src="./image/guide_floor_m1(3).png" alt="고서화 전시장"></li>
+                                        <li class="tab"><img src="./image/guide_floor_m1(4).png" alt="고미술 조각 전시장"></li>
+                                        <li class="tab"><img src="./image/guide_floor_m1(5).png" alt="로비"></li>
+                                    </ul>
+                                    <ul class="side-con-box floor-txt">
+                                        <li class="view">
+                                            <div class="txt-flex">
+                                                <strong>4F</strong><b>푸른빛 문양 한 점</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>고려시대 청자의 세계가 펼쳐집니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>3F</strong><b>흰빛의 여정</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>조선시대 분청사기와 백자를 감상할 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>2F</strong><b>감상과 취향</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>다양한 기법과 주제의 고서화를 볼 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>1F</strong><b>권위와 취향, 화려함의 세계</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>불교미술, 금속공예, 나전칠기 등에 구현된 선조들의 정신세계와 미감을 느낄 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B1</strong><b>로비</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_baby_room.svg" alt="수유실">
+                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left-rigt">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>매표&안내 데스크와 리움 스토어, 카페, 물품보관함, 미디어룸이 있습니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-tab m2">
+                                <div class="floor-select-group">
+                                    <div class="group-title">
+                                        <h4>M2 현대미술<span>상설전</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown">
+                                    </div>
+                                    <ul class="tab-wrap group-option">
+                                        <li class="tab selected"><b>2F</b><span class="floor-titile">검은 공백</span></li>
+                                        <li class="tab"><b>1F</b><span class="floor-titile">중력의 역방향</span></li>
+                                        <li class="tab"><b>B1</b><span class="floor-titile">이상한 행성</span></li>
+                                    </ul>
+                                </div>
+                                <div class="floor-con-group">
+                                    <ul class="side-con-box floor-img">
+                                        <li class="view"><img src="./image/guide_floor_m2(1).png" alt="m2 2층 전시장"></li>
+                                        <li><img src="./image/guide_floor_m2(2).png" alt="m2 1층 전시장"></li>
+                                        <li><img src="./image/guide_floor_m2(3).png" alt="m2 지하1층 전시장"></li>
+                                    </ul>
+                                    <ul class="side-con-box floor-txt">
+                                        <li class="view">
+                                            <div class="txt-flex">
+                                                <strong>2F</strong><b>검은 공백</b>
+                                                <div class="toilet"></div>
+                                            </div>
+                                            <p>우리의 삶과 예술 전반에 투영된 검정색의 깊고 풍부한 의미를 살펴보는 전시로 M2의 건축적 환경과 어우러지는 전시입니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>1F</strong><b>중력의 역방향</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                </div>
+                                            </div>
+                                            <p>빛과 움직임 등 비물질 영역으로 확장된 작품들을 소개합니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B1</strong><b>이상한 행성</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>예술을 통한 자유로운 상상과 사유의 시간으로 우리를 인도하며 다채로운 현대미술의 세계를 체험할 수 있습니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-tab cultural-center">
+                                <div class="floor-select-group">
+                                    <div class="group-title">
+                                        <h4>아동교육문화센터<span>기획전</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown">
+                                    </div>
+                                    <ul class="tab-wrap group-option">
+                                        <li class="tab selected"><b>1F</b><span class="floor-titile">블랙박스 라운지 키즈랩</span></li>
+                                        <li class="tab"><b>B1</b><span class="floor-titile">블랙박스</span></li>
+                                        <li class="tab"><b>B2</b><span class="floor-titile">그라운드 갤러리 강당</span></li>
+                                        <li class="tab"><b>B3</b><span class="floor-titile">고객주차장</span></li>
+                                    </ul>
+                                </div>
+                                <div class="floor-con-group">
+                                    <ul class="side-con-box floor-img">
+                                        <li class="view"><img src="./image/guide_floor_cultural_center(1).png" alt="블랙박스 라운지"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(2).png" alt="블랙박스 외관"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(3).png" alt="그라운드 갤러리 전시 작품"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(4).png" alt="주차장"></li>
+                                    </ul>
+                                    <ul class="side-con-box floor-txt">
+                                        <li class="view">
+                                            <div class="txt-flex">
+                                                <strong>1F</strong><b>블랙박스 라운지 키즈랩</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>블랙박스 라운지 키즈랩에서는 어린이들을 위한 프로그램이 진행됩니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B1</strong><b>블랙박스</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>블랙박스에서는 외부와 단절된 독립적인 분위기와 조형작품들을 감상하실 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B2</strong><b>그라운드 갤러리 강당</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_baby_room.svg" alt="수유실">
+                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left-rigt">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>그라운드 갤러리에서는 시기별로 달라지는 기획전시와 독특한 건축구조를 감상하실 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B3</strong><b>고객주차장</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>리움 미술관 고객 전용 주차장입니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="vr">
+                            <div class="vr-txt">
+                                <h5>VR 투어</h5>
+                                <a id="VR" title="전체화면으로 보기" href="https://my.matterport.com/show/?m=2btF8xwpEst">전체화면으로 보기 <img src="../../image/icon_shortcut.svg"></a>
+                            </div>                           
+                            <iframe id="eazel-player" src="https://my.matterport.com/show/?m=2btF8xwpEst" frameborder="0" scrolling="NO"></iframe>
+                        </section>
+                    </div>
+                </section>
+                <section id="did" class="con-box digital-guide-did-wrap">
+                    <h2>21세기 리움</h2>
+                    <div class="container">
+                        <section class="digital-guide">
+                            <h3>디지털 가이드</h3>
+                            <h4>Digital Guide</h4>
+                            <div class="guide-intro-wrap">
+                                <div class="guide-intro">
+                                    <div class="guide-intro-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+                                        <img src="./image/guide_digital_guide(1).png" alt="디지털가이드 사용모습">
+                                    </div>
+                                    <div class="guide-intro-txt" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+                                        <strong>내 손안의 도슨트, 디지털 가이드로 <br>리움의 작품들과 더욱 가까워지세요</strong>
+                                        <p>
+                                            2021년, 새롭게 선보이는 갤럭시 S21 Plus 기반의<br>
+                                            3세대 디지털 가이드는 더욱 똑똑하고 친절해 졌습니다.
+                                        </p>
+                                        <p>
+                                            관람을 마치고 <span>End-Ticket</span>을 챙겨보세요.<br>
+                                            재미있는 선물이 기다리고 있어요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-point-wrap">
+                                <div class="point-m-wrap guide-swiper">
+                                    <ul class="point-m swiper-wrapper" data-aos="fade-left" data-aos-duration="1500">
+                                        <li class=" swiper-slide">
+                                            <div class="point-m-txt">
+                                                <span>STEP <b>01</b></span>
+                                                <strong>전시 중인 모든 <br>작품의 해설 제공</strong>
+                                                <p class="p">
+                                                    디지털 가이드는 한국어, 영어, <br>
+                                                    중국어, 일본어 해설을 제공합니다.
+                                                </p>
+                                            </div>
+                                            <img src="./image/guide_digital_guide(2).png" alt="작품해설화면">
+                                        </li>
+                                        <li class="item swiper-slide">
+                                            <div class="point-m-txt">
+                                                <span>STEP <b>02</b></span>
+                                                <strong>5가지 주제의<br>투어 프로그램</strong>
+                                                <ul>
+                                                    <li class="p"># M1 고미술 큐레이터 투어</li>
+                                                    <li class="p"># M2 현대미술 큐레이터 투어</li>
+                                                    <li class="p"># 또 하나의 예술, 리움 건축</li>
+                                                    <li class="p"># 2021, 달라진 리움</li>
+                                                    <li class="p"># Leeum 소장품 하이라이트</li>
+                                                </ul>
+                                            </div>
+                                            <img src="./image/guide_digital_guide(3).png" alt="투어프로그램화면">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="point-pc-wrap">
+                                    <div class="point-pc">
+                                        <div class="point-pc-img" data-aos="fade-right" data-aos-duration="1000">
+                                            <div class="img">
+                                                <img src="./image/guide_digital_guide(2).png" alt="작품해설화면">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./image/guide_digital_guide(3).png" alt="투어프로그램화면">
+                                            </div>
+                                        </div>
+                                        <div class="point-pc-txt" data-aos="fade-left" data-aos-duration="1000">
+                                            <div class="txt">
+                                                <span>STEP <b>01</b></span>
+                                                <strong>전시 중인 모든 작품의 해설 제공</strong>
+                                                <p class="p">디지털 가이드는 한국어, 영어, 중국어, 일본어 해설을 제공합니다.</p>
+                                            </div>
+                                            <div class="txt">
+                                                <span>STEP <b>02</b></span>
+                                                <strong>5가지 주제의 투어 프로그램</strong>
+                                                <ul>
+                                                    <li class="p"># M1 고미술 큐레이터 투어</li>
+                                                    <li class="p"># M2 현대미술 큐레이터 투어</li>
+                                                    <li class="p"># 또 하나의 예술, 리움 건축</li>
+                                                    <li class="p"># 2021, 달라진 리움</li>
+                                                    <li class="p"># Must See! Leeum (소장품 하이라이트)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="did">
+                            <h3>리움 DID</h3>
+                            <h4>Digital Interactive Display</h4>
+                            <div class="did-awards">
+                                <div class="awards-flex">
+                                    <div class="awards-txt" data-aos="fade-up-right" data-aos-duration="1000">
+                                        <strong>디자인 어워드 최우수상</strong>
+                                        <p>
+                                            <span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와<br>
+                                            leeum의 디지털인터랙티브 솔루션이 결합하여 <br class="m-br">
+                                            만들어진 전시 연출 기법으로
+                                        </p>
+                                        <p>
+                                            2013년 레드닷 디자인 어워드 <br class="m-br">
+                                            최우수상에 선정된 바 있으며,
+                                        </p>
+                                        <p>
+                                            2021년 재개관과 함께 <br class="m-br">
+                                            업그레이드 되었습니다.
+                                        </p>
+                                    </div>
+                                    <img class="mobile-hidden" src="./image/guide_did_photo(1).png" alt="did화면1" data-aos="fade-up-left" data-aos-duration="1000">
+                                </div>
+                                <div class="did-img2" data-aos="fade-up" data-aos-duration="1000">
+                                    <img src="./image/guide_did_photo_(2).PNG" alt="did화면2">
+                                </div>
+                            </div>                            
+                            <div class="did-point" data-aos="fade-up" data-aos-duration="1000">
+                                <strong>전통 미술의 정교함</strong>
+                                <p>
+                                    한국의 전통 미술품 중에는 화려함과 정교함이 돋보이는 <br class="m-br"> 작품들도 많습니다.<br class="pc-br">
+                                    특히, 귀한 재료를 사용하여 장인의 <br class="m-br">손에 의해 만들어진 공예품과 <br class="pc-br">
+                                    섬세한 표현이 드러나는 <br class="m-br">회화에서 이러한 아름다움을 느낄 수 있습니다.
+                                </p>
+                                <img src="./image/guide_did_photo_(3).png" alt="did화면3">
+                            </div>
+                            <div class="did-video" data-aos="fade-up" data-aos-duration="1000">
+                                <h5>DID사용법</h5>
+                                <p>
+                                    <span class="mobile-hidden">leeum의 DID는 </span>육안으로는 잘 보이지 않는 유물의 미세한 디테일을 <br class="m-br">
+                                    관찰할 수 있고, <br class="pc-br">
+                                    작품을 360도로 돌려가며, 작품의 뒷면이나 <br class="m-br">
+                                    내부와 같이 노출되지 않은 부분까지 감상하실 수 있습니다.
+                                </p>
+                                <div class="video-frame"> 
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cTBlbVVCt7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <div class="sitemap-banner-wrap">
+        <div class="container">
+            <div class="sob">
+                <div class="sitemap">
+                    <div class="m1">
+                        <h6>리움</h6>
+                        <ul>
+                            <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                            <li><a href="../about/about_guide.html">관람 안내</a></li>
+                            <li><a href="../about/about_facility.html">시설 안내</a></li>
+                            <li><a href="../about/about_map.html">오시는 길</a></li>
+                            <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                        </ul>
+                    </div>
+                    <div class="m2">
+                        <h6>전시</h6>
+                        <ul>
+                            <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                            <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                        </ul>
+                    </div>
+                    <div class="m3">
+                        <h6>소장품</h6>
+                        <ul>
+                            <li><a href="../collect/collect_antique.html">고미술</a></li>
+                            <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                            <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                            <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                        </ul>
+                    </div>
+                    <div class="m4">
+                        <h6>프로그램</h6>
+                        <ul>
+                            <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                            <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                        </ul>
+                    </div>
+                    <div class="m5">
+                        <h6>작가</h6>
+                        <ul>
+                            <li><a href="../artist/artist.html">작가</a></li>
+                        </ul>
+                    </div>
+                    <div class="m6">
+                        <h6>소식</h6>
+                        <ul>
+                            <li><a href="../news/news_notice.html">공지사항</a></li>
+                            <li><a href="../news/news_data.html">자료</a></li>
+                            <li><a href="../news/news_faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="outlink">
+                    <ul>
+                        <li>
+                            <a href="https://ticket.leeum.org/leeum/personal/exhibitList.do">
+                                <div class="reserve">
+                                    <h6>예약 · 예매</h6>
+                                    <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leeumstore.org/">
+                                <div class="store">
+                                    <h6>리움 스토어</h6>
+                                    <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="../register/register_join_type.html" class="banner">
+                    <div class="banner-box">
+                        <div class="banner-txt-wrap">
+                            <div class="banner-txt">
+                                <h6>LEEUM <span>MemberShip</span></h6>
+                                <p>
+                                    <strong>리움 멤버십</strong>에 가입하고<br>
+                                    <strong>무료 관람 및 유료 프로그램 할인</strong> 등<br>
+                                    다양한 혜택을 만나보세요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="site-info-wrap">
+        <div class="container">
+            <div class="site-info">
+                <div class="i1">
+                    <ul>
+                        <li><a>개인정보처리방침</a></li>
+                        <li><a>이메일 무단수집 거부</a></li>
+                        <li><a href="mailto:museum@leeum.org">이메일 문의<span class="contact">museum@leeum.org</span></a></li>
+                        <li><a href="tel:02-2014-6900">전화문의<span class="contact">02-2014-6900</span></a></li>
+                    </ul>
+                </div>
+                <div class="i2">
+                    <select name="family">
+                        <option value="" hidden>패밀리 사이트</option>
+                        <option value="http://www.samsungculture.org/">삼성문화재단</option>
+                        <option value="http://www.hoammuseum.org/">호암미술관</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="leeum-info-wrap">
+        <div class="container">
+            <div class="leeum-info">
+                <div class="place">
+                    <h5>리움 미술관</h5><span class="eng">Leeum museum of Art</span>
+                    <address>서울특별시 용산구 이태원로55길 60-16 (한남동)</address>
+                    <address>우) 04348</address>
+                </div>
+                <div class="hour">
+                    <h6>영업 시간</h6>
+                    <p><time>10:00 ~ 18:00</time><span>&nbsp;(매표 마감 <time>17 : 30</time>)</span></p>
+                    <p>휴관일 : 매주 월요일, 매년 설날(음력) 및 추석 당일</p>
+                </div>
+                <div class="sns-copyright">
+                    <div class="sns">
+                        <a href="https://www.facebook.com/leeumofficial"><img src="../../image/icon_facebook.svg"></a>
+                        <a href="https://www.instagram.com/leeummuseumofart/"><img src="../../image/icon_instagram.svg"></a>
+                        <a href="https://www.youtube.com/channel/UCyXVnJijxHsBrzN9AAZ-Yxw/"><img src="../../image/icon_youtube.svg"></a>
+                    </div>
+                    <p>© Leeum Museum of Art. All Rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

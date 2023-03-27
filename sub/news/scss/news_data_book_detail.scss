@@ -1,0 +1,99 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('data_book_header.jpg');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+
+        .i-slide img {
+            width: 100%;
+            @include responsive(pc-screens) {
+                border-radius: 5px;
+                margin-top: 40px;
+            }
+        }
+
+        .i-des .loc-icon {
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .mini-box {
+            margin-bottom: 20px !important;
+
+            th {
+                width: 25% !important;
+
+                @include responsive(tablet-screens) {
+                    width: 15% !important;
+                }
+
+                @include responsive(pc-screens) {
+                    width: 30% !important;
+                }
+            }
+        }
+
+        .introduce {
+
+            strong {
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            .list {
+                margin-left: 10px;
+                
+                @media screen and(min-width:400px) {
+                    display: flex;
+                    column-gap: 20px;
+                }
+                
+
+                @include responsive(pc-screens) {
+                    justify-content: space-between;
+                    width: calc(100% - 120px);
+                }
+
+                ul {
+                    margin-top: 15px;
+                    
+                    @include responsive(pc-screens) {
+                        width: 50%;
+                        margin-top: 0;
+                    }
+    
+                    li {
+                        @include content_align();
+                        padding-left: 10px;
+                        background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+                        background-size: 2px;
+                        background-position: left center;
+                    }
+                }
+            }
+        }
+    }
+    
+    section.movePage {
+        @include move_page();
+    }
+}
+
+footer {
+    @include footer();
+}

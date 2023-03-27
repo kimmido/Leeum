@@ -1,0 +1,197 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('artist_header.png');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+
+        .item-wrap {
+            
+            .i-slide {
+
+                @include responsive(pc-screens) {
+                    width: 60%;
+                }
+
+                .main-pic {
+                    height: auto;
+        
+                    video {
+                        width: 100%; height: 280px;
+                        background: #000;
+                        object-fit: cover;
+
+                        @include responsive(pc-screens) {
+                            height: auto;
+                            background: transparent;
+                            object-fit: initial;
+                        }
+                    }
+                }
+            }
+
+            .i-des {
+
+                @include responsive(pc-screens) {
+                    width: 35%;
+                }
+
+                .loc-icon {
+
+                    .loc-box {
+                        display: flex;
+                        column-gap: 15px;
+        
+                        .loc div {
+    
+                            &.tag {
+                                width: 50px;
+                            }
+        
+                            &:last-child {
+                                width: calc(80px - 50px);
+                            }
+                        }
+                    }
+                }
+    
+                .tit-exp {
+                    margin-bottom: 50px;
+
+                    @include responsive(pc-screens) {
+                        padding: 0 10px;
+                    }
+
+                    .tit {
+
+                        & * {
+                            text-align: center;
+        
+                            @include responsive(pc-screens) {
+                                text-align: left;
+                            }
+                        }
+
+                        .lang {
+                            margin-top: 0;
+                        }
+                    }
+
+                    .exp {
+
+                        a {
+                            color: $yellow-brown;
+
+                            img {
+                                height: 12px;
+                                margin-left: 5px;
+                                filter: $svg-yellowbrown;
+                            }
+                        }
+
+                        table.mini-box th {
+
+                            @include responsive(pc-screens) {
+                                width: 20%;
+                            }
+                        } 
+                    }
+                }  
+            }
+            
+            .interview {
+
+                .question {
+                    
+                    @include responsive(pc-screens) {
+                        margin: 60px 0 20px;
+                    }
+
+                    .mark {
+                        font-size: 130%;
+                        margin-right: 5px;
+                        color: $yellow-brown;
+                    }
+    
+                    .nextline {
+                        display: block;
+                        margin: 5px 0 20px 36px;
+
+                        @include responsive(pc-screens) {
+                            display: inline-block;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .answer {
+
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        column-gap: 3%;
+                    }
+                    
+                    p {
+                        @include content_align(justify);
+                        
+                        @include responsive(pc-screens) {
+                            width: 50%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.work {
+
+        .work-wrap {
+
+            &:last-child { margin-top: 60px; }
+
+            h6 {
+
+                @include responsive(pc-screens) {
+                    font-size: $h5;
+                }
+            }
+        }
+
+        .item-box {
+            @include itemList_box();
+            flex-wrap: nowrap;
+            margin-top: 30px;
+
+            @include responsive(pc-screens) {
+                justify-content: flex-start;
+            }
+        }
+
+        .swiper {
+            @include work_swiper();
+        }
+    }
+
+    section.movePage {
+        @include move_page();
+    }
+}
+
+footer {
+    @include footer();
+}

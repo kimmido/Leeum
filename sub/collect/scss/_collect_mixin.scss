@@ -1,0 +1,15 @@
+
+/* 사용처 : 보존사례 */
+
+// 꽉채우고 가운데 정가운데 정렬
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin arrow-helper() {
+    content: "";
+    display: inline-block;
+    border: 6px inset transparent;
+}

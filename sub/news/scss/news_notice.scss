@@ -1,0 +1,202 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('notice_header.jpg');
+}
+
+main {
+
+    .tab-menu {
+
+        .count {
+            @include flex_between_center();
+            
+            @include responsive(pc-screens) {
+                border-bottom: 1px solid $bk5;
+            }
+    
+            b {
+                margin-right: 2px;
+            }
+    
+            span { 
+                @include gothic_font(medium); 
+                margin-right: 20px; 
+            }
+
+            @include responsive(pc-screens){
+                white-space: nowrap;
+            }
+        }
+    }
+    
+    .tab-menu .gnb {
+        display: flex;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+
+        @include responsive(pc-screens){
+            width: 64.28571428571429%;
+            height: 55px;
+            line-height: 55px;
+        }
+        
+        li {
+            &:first-child {
+                border-left: 1px solid $bk5;
+            }
+            position: relative;
+            width: 25%;
+            border-top: 1px solid $bk5;
+            border-right: 1px solid $bk5;
+            border-bottom: 1px solid $bk5;
+            font-size: 14px;
+            color: $bk3;
+            cursor: pointer;
+
+            @include responsive(pc-screens) {
+                font-size: 16px;
+            }
+        }
+
+        .on {
+            border-bottom: none;
+            color: #000;
+            @include gothic_font(semibold, 14px);
+            transition: all .5s;
+
+            @include responsive(pc-screens) {
+                font-size: 16px;
+            }
+            
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -1px;
+                width: calc(100% + 1px);
+                height: 4px;
+                background-color: #000;
+                z-index: 1;
+            }
+
+            a {
+                color: #000;
+                @include gothic_font(semibold);
+            }
+        }
+    }
+
+    .tab-menu {
+        @include responsive(pc-screens) {
+            display: flex;
+        }
+
+        span {
+
+            @include responsive(pc-screens) {
+                margin: auto 0;
+                padding-left: 430px;
+            }
+        }
+    }
+
+    .tab-menu span {
+        display: none;
+
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    .cont {
+
+        .content {
+            @include flex_between_center();
+            column-gap: 20px;
+            padding : 12px 5px;
+            border-bottom: 1px solid $bk7;
+    
+            @include responsive(pc-screens){
+                padding: 22px;
+            }
+    
+            span:first-child {
+                display: none;
+                
+                @include responsive(pc-screens) {
+                    display: block;
+                    color: $bk1;
+                }
+            }
+    
+            .type {
+                display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                    width: 100px;
+                    padding: 8px;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+                
+                &.dark-brown   { background-color: $dark-brown; }
+                &.red-brown    { background-color: $red-brown; }
+                &.yellow-brown { background-color: $yellow-brown; }
+                &.yellow       { background-color: #f3cf7a; }
+            }
+    
+            a {
+                padding: 10px 0;
+                @include gothic_font(medium, 15px);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
+                @include responsive(pc-screens){
+                    width: 1080px;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            
+            span.date {
+                font-size: 14px;
+                white-space: nowrap;
+                color: $bk2;
+    
+    
+                @include responsive(pc-screens){
+                    margin: 0;
+                    font-size: 15px;
+                }
+            }
+    
+        }
+    }
+    
+    section.paging {
+        @include paging();
+    }
+}
+
+footer {
+    @include footer();
+}

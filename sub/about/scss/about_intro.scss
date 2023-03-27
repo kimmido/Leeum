@@ -1,0 +1,528 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+
+@keyframes slideup {
+    from {
+        margin-top: 100vh;
+        opacity: 0;
+        visibility: visible;
+    }
+    
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slidedown {
+    from {
+        margin-top: 100;
+        opacity: 1;
+    }
+    
+    to {
+        margin-top: 100vh;
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slideup 0.5s ease forwards;
+    transition: all 0.5s;    
+
+    &.silde-out {
+        animation: slidedown 0.4s ease-out;
+    }
+
+    header {
+        @include header_common();
+        @include full_bg('intro_header.png');
+        height: 60vh !important;
+        margin-bottom: 0;
+        
+        &:before {
+            background: transparent;
+        }
+
+
+        #close {
+            
+            a {
+                position: fixed;
+                top: 20px; right: 20px;
+                display: block;
+                width: 25px; height: 25px;
+                z-index: 20;
+                
+                transition: transform 0.7s;
+                
+                @include responsive(tablet-screens) {
+                    top: 40px; right: 40px;
+                    width: 30px; height: 30px;
+                }
+                
+                &:hover {
+                    transform: rotate(360deg);
+                }
+                
+                &.end {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    main {        
+        overflow-x: hidden;
+        @include responsive(tablet-screens) { font-size: 20px; }
+        
+        div h2 {
+            font-size: calc(1em + 16px);
+            
+            @include responsive(pc-screens) { 
+                font-size: 46px;
+            }
+        }
+
+        .m-br { 
+            @include responsive(tablet-screens) { 
+                display: none; 
+            } 
+        }
+
+        .pc-br { 
+            display: none; 
+
+            @include responsive(tablet-screens) { 
+                display: inline; 
+            } 
+        }
+
+        section.intro-mission-wrap {
+            
+            p {
+                @include content_align($align: left, $height: 2em);
+                @include responsive(tablet-screens) { line-height: 36px; }
+                @include responsive(pc-screens) { line-height: 44px; }
+
+                b {
+                    color: $red-brown;
+                }
+            }
+
+            .intro {
+                margin-top: 60px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 110px;
+                }
+                
+                > strong {
+                    display: block;
+                    text-align: center;
+                    @include batang_font(medium, 28px);
+                    line-height: 44px;
+
+                    @include responsive(pc-screens) {
+                        text-align: left;
+                        font-size: 46px;
+                        line-height: 76px;
+                    }
+                }
+                
+                .info-img1,
+                .info-img2 {
+                    margin-top: 60px;
+                    width: calc(100% + 20px);
+                    overflow: hidden;
+
+                    @include responsive(pc-screens) {
+                        border-radius: 5px;
+                    }
+                }
+                
+                .info-absolute {
+                    // background-color: cadetblue;
+                    
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        right: 20px;
+                        width: 720px;
+                    }
+                    
+                    .info-img1 {
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        
+                        @include responsive(pc-screens) {
+                            width: 100%;
+                            margin-top: 116px;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    } 
+                    
+                    p {
+                        margin-top: 30px;
+                    }
+                }
+                
+                .info-img2 {
+                    position: relative;
+                    transform: translateX(-20px);
+                    aspect-ratio: 37 / 24;                
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    
+                    @include responsive(pc-screens) {
+                        width: 460px;
+                        height: 740px;
+                        margin-top: 276px;
+                        transform: translateX(0);
+                    }
+                    
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        width: 448px / 390px * 100%;
+
+                        @include responsive(pc-screens) {
+                            margin-left: -191px;
+                            width: 987px;
+                        }
+                    }
+                }
+            }
+            
+            .mission {
+                margin-top: 40px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 120px;
+                }
+
+                h2, p {
+
+                    @include responsive(pc-screens) {
+                        margin-left: 80px;
+                    }
+                }
+                
+                .mission-txt {
+
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        margin-top: 50px;
+                    }
+                    
+                    p {
+                        text-align: justify;
+                        margin-top: 30px;
+        
+                        @include responsive(pc-screens) {
+                            width: 716px;
+                            margin-top: 0;
+                        }
+                    }
+                    
+                    .mobile-relative {
+                        position: relative;
+                        
+                        @include responsive(pc-screens) {
+                            position: static;
+                        }
+
+                        p { 
+                            width: 190px / 350px * 100%;
+
+                            @include responsive(pc-screens) {
+                                width: 716px;
+                            }
+                        }
+                        
+                        img {
+                            position: absolute;
+                            right: -20px; top: 0;
+                            width: 170px / 390px * 100%;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            
+                            @include responsive(pc-screens) {
+                                border-top-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                                right: 100px;
+                                width: 380px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.core-value-wrap {
+            position: relative;
+            margin-top: 100px / 350px * 100%;
+            @include full_bg('intro_value.png', sub);
+            background-color: #000;
+            
+            @include responsive(pc-screens) {
+                margin-top: 420px;
+            }
+            
+            &::before {
+                @include overlay_bk(0.5);
+            }
+            
+            .core-value {
+                text-align: center;
+                color: #fff;
+                
+                h2 {
+                    margin-top: 56px;
+
+                    @include responsive(pc-screens) {
+                        margin-top: 140px;
+                    }
+                }
+                
+                ul {
+                    margin-top: 30px;
+
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 90px;
+                        padding: 0 80px;
+                    }
+                    
+                    li {
+                        position: relative;
+                        width: 190px;
+                        aspect-ratio: 1;
+                        margin: 0 auto;
+                        border-radius: 50%;
+                        background-color: rgba(255, 255, 255, 0.2 );
+                        
+                        @include responsive(pc-screens) {
+                            width: 330px;
+                            margin: 0;
+                            border: 2px solid #fff;
+                            background-color: transparent;
+                        }
+                        
+                        &:nth-child(2),
+                        &:last-child {
+                            margin-top: -40px;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 0
+                            }
+                            
+                            &::after {
+
+                                @include responsive(pc-screens) {
+                                    position: absolute;
+                                    left: (-63px - 30px); top: 50%;
+                                    width: 63px; height: 1px;
+                                    content: '';
+                                    border-bottom: 3px dashed rgba(255, 255, 255, 0.6);
+                                }
+                            }
+                        }
+                        
+                        .value {
+                            @include element_center();
+                            
+                            span {
+                                display: block;
+                            }
+                            
+                            span.eng-val {
+                                @include gothic_font(semibold, calc(1em + 14px));
+
+                                @include responsive(pc-screens) {
+                                    font-size: 36px;
+                                }
+                            }
+                            
+                            span.ko-val {
+                                font-size: calc(1em + 2px);
+                                margin-top: 8px;
+
+                                @include responsive(pc-screens) {
+                                    font-size: $h5;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .val-text {
+                    margin-top: 56px;
+                    padding-bottom: 80px;
+
+                    @include responsive(pc-screens) {
+                        margin-top: 130px;
+                        padding-bottom: 235px;
+                    }
+                    
+                    strong {
+                        @include gothic_font(medium, calc(1em + 6px));
+                        line-height: 1.5em;
+
+                        @include responsive(pc-screens) {
+                            font-size: 36px;
+                        }
+                    }
+                    
+                    p {
+                        margin-top: 40px;
+                        line-height: 2em;
+                        @include gothic_font(light);
+
+                        @include responsive(pc-screens) {
+                            font-size: $h6;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.mi-wrap {
+            margin-top: 100px;
+            
+            @include responsive(pc-screens) {
+                margin-top: 200px;
+            }
+            
+            .mi {
+                text-align: center;
+                
+                p {
+                    margin-top: 30px;
+                    @include content_align(center, 2em);
+                    @include line_break();
+                    
+                    @include responsive(tablet-screens) {
+                        font-size: 18px;
+                    }
+                    @include responsive(pc-screens) {
+                        margin-top: 45px;
+                        font-size: 20px;
+                    }
+                }
+
+                .mi-grid {
+                    position: relative;
+                    width: 100%; height: 100%;
+                    border: 1px solid $bk5;
+                    border-radius: 5px;
+                    @include full_bg('MI_grid.png', sub);
+                    background-size: auto;
+                    
+                    img {
+                        @include element_center();
+                    }
+                }
+                
+                .mi-view {
+                    width: 100%; height: 250px;
+                    margin-top: 45px;
+                    
+                    @include responsive(pc-screens) {
+                        width: 1160px; height: 426px;
+                        margin-top: 75px;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                        
+                    }
+                    
+                    .mi-grid > img {
+                        width: 170px;
+
+                        @include responsive(pc-screens) {
+                            width: 324px;
+                        }
+                    }
+                }
+
+                .mi-type {
+                    margin-top: 90px;
+                    padding-bottom: 165px;
+                    
+                    @include responsive(pc-screens) {
+                        @include flex_between();
+                        margin-top: 200px;
+                        padding-bottom: 330px;
+                    }
+
+                    strong {
+                        display: block;
+                        text-align: left;
+                        font-size: calc(1em + 4px);
+                        margin-bottom: 20px;
+                        
+                        @include responsive(pc-screens) {
+                            font-size: $h4;
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    > .col-type {
+                        
+                        @include responsive(pc-screens) {
+                            width: 560px;
+                        }
+                        
+                        .col-view {
+                            width: 100%; height: 220px;
+
+                            @include responsive(pc-screens) {
+                                height: 446px;
+                            }
+
+                            .mi-grid > img {
+                                width: 116px;
+
+                                @include responsive(pc-screens) {
+                                    width: 211px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    > .row-type {
+                        margin-top: 40px;
+                        
+                        @include responsive(pc-screens) {
+                            width: 800px;
+                            margin-top: 0;
+                        }
+
+                        .row-view {
+                            width: 100%; height: 170px;
+
+                            @include responsive(pc-screens) {
+                                height: 446px;
+                            }
+                            
+                            .mi-grid > img {
+                                width: 270px;
+                                filter: $svg-black;
+
+                                @include responsive(pc-screens) {
+                                    width: 562px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

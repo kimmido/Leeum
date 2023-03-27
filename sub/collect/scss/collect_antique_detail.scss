@@ -1,0 +1,41 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('antique_header.jpg');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+        @include detail_slide(3);
+    }
+
+    section.similarItem {
+        
+        .item-box {
+            @include itemList_box();
+            margin-top: 30px;
+        }
+    }
+    
+    section.movePage {
+        @include move_page();
+    }
+}
+
+footer {
+    @include footer();
+}
+
+@include fancybox_style();

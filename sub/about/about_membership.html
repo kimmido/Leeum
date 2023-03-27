@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="김미도">
+    <meta name="description" content="리움미술관 멤버십은 전시 할인, 멤버십 한정 프로그램 등 다양한 혜택을 제공하고 있습니다.">
+    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-jp-dynamic-subset.css" as="style" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="./css/about_membership.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer type="text/javascript" src="../../js/common.js"></script>
+    <script defer type="text/javascript" src="../../js/dropdown.js"></script>
+    <script defer type="text/javascript" src="./js/tab_menu.js"></script>
+    <title>리움 멤버십 | Leeum</title>
+</head>
+<body>
+    <header>
+        <div class="mobile-menu-popup hidden">
+            <div class="window">
+                <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
+                <div class="popup">
+                    <div class="bk-menu">
+                        <a href="../../index.html"><img src="../../image/logo_leeum_typo.svg" alt="메인으로 이동" class="logo"></a>
+                        <ul class="icon-box">
+                            <li><a href="../register/register_login.html"><img src="../../image/icon_user.svg">MY</a></li>
+                            <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="../../image/icon_reserve.svg">예매</a></li>
+                            <li><a href="https://leeumstore.org/"><img src="../../image/icon_store.svg">스토어</a></li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="search" placeholder="검색어를 입력하세요" class="search">
+                            <button type="button" class="search-btn">
+                        </div>
+                    </div>
+                    <div class="wh-menu">
+                        <div class="m1">
+                            <div class="group">
+                                <h6>리움</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                <li><a href="../about/about_map.html">오시는 길</a></li>
+                                <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                            </ul>
+                        </div>
+                        <div class="m2">
+                            <div class="group">
+                                <h6>전시</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                            </ul>
+                        </div>
+                        <div class="m3">
+                            <div class="group">
+                                <h6>소장품</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                            </ul>
+                        </div>
+                        <div class="m4">
+                            <div class="group">
+                                <h6>프로그램</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                            </ul>
+                        </div>
+                        <div class="m5">
+                            <div class="group">
+                                <h6>작가</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../artist/artist.html">작가</a></li>
+                            </ul>
+                        </div>
+                        <div class="m6">
+                            <div class="group">
+                                <h6>소식</h6><img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                            </div>
+                            <ul class="opt">
+                                <li><a href="../news/news_notice.html">공지사항</a></li>
+                                <li><a href="../news/news_data.html">자료</a></li>
+                                <li><a href="../news/news_faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-menu-wrap">
+            <div class="container">
+                <div class="logo-menu">
+                    <div class="logo">
+                        <a href="../../index.html"></a>
+                    </div>
+                    <div class="mobile-menu">
+                        <img src="../../image/icon_mobile_menu.svg" alt="모바일 메뉴">
+                    </div>
+                    <nav class="pc-menu">
+                        <div class="gnb one">
+                            <ul>
+                                <li>
+                                    <a href="../about/about_intro.html" class="group m1">리움</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                                        <li><a href="../about/about_guide.html">관람 안내</a></li>
+                                        <li><a href="../about/about_facility.html">시설 안내</a></li>
+                                        <li><a href="../about/about_map.html">오시는 길</a></li>
+                                        <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../exhibition/exhibition_now.html" class="group m2">전시</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                                        <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../collect/collect_antique.html" class="group m3">소장품</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../collect/collect_antique.html">고미술</a></li>
+                                        <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                                        <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                                        <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../program/program_now.html" class="group m4">프로그램</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                                        <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../artist/artist.html" class="group">작가</a></li>
+                                <li>
+                                    <a href="../news/news_notice.html" class="group m6">소식</a>
+                                    <ul class="opt hidden">
+                                        <li><a href="../news/news_notice.html">공지사항</a></li>
+                                        <li><a href="../news/news_data.html">자료</a></li>
+                                        <li><a href="../news/news_faq.html">FAQ</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gnb two">
+                            <ul class="mini-menu">
+                                <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움 스토어</a></li>
+                                <li>
+                                    <div class="lang">
+                                        <img src="../../image/icon_language.svg">KOR<img src="../../image/icon_arrow.svg" class="dropdown">
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="icon-menu">
+                                <li><a href="../register/register_login.html" class="login"></a></li>
+                                <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do" class="reserve"></a></li>
+                                <li><a class="search"></a>
+                                    <div class="search-box hidden">
+                                        <input type="search" placeholder="검색어를 입력하세요" class="searchbar">
+                                        <button type="button" class="search-btn">
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="lang-opt">
+                                <li><a class="on">KOR</a></li>
+                                <li><a>ENG</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    <div class="sub-title">
+        <p class="eng">leeum membership</p>
+        <h2 class="kor">리움 멤버십</h2>
+    </div>
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li class="home"><a href="/../../index.html"></a></li>
+                <li class="loc">
+                    <div class="step">
+                        <a href="../about/about_intro.html">리움</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                    </div>
+                    <ul class="opt">
+                        <li><a href="../about/about_intro.html" class="on">리움</a></li>
+                        <li><a href="../exhibition/exhibition_now.html">전시</a></li>
+                        <li><a href="../collect/collect_antique.html">소장품</a></li>
+                        <li><a href="../program/program_now.html">프로그램</a></li>
+                        <li><a href="../artist/artist.html">작가</a></li>
+                        <li><a href="../news/news_notice.html">소식</a></li>
+                    </ul>
+                </li>
+                <li class="loc">
+                    <div class="step">
+                        <a href="../about/about_membership.html">리움 멤버십</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                    </div>
+                    <ul class="opt">
+                        <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                        <li><a href="../about/about_guide.html">관람 안내</a></li>
+                        <li><a href="../about/about_facility.html">시설 안내</a></li>
+                        <li><a href="../about/about_map.html">오시는 길</a></li>
+                        <li><a href="../about/about_membership.html" class="on">리움 멤버십</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="tabmenu-wrap">
+            <div class="container">
+                <div class="tab-nav membership">
+                    <span class="nav on"><a href="#membership">멤버십</a></span>
+                    <span class="nav"><a href="#corporate">법인 회원</a></span>
+                    <span class="nav"><a href="#associate">제휴 할인</a></span>
+                    <span class="nav"><a href="../program/program_now.html">프로그램<img src="../../image/icon_shortcut.svg" class="shortcut"></a></span>
+                </div>
+            </div>
+            <div class="tab-con">
+                <section id="membership" class="con-box membership-wrap">
+                    <h2>membership-section</h2>
+                    <div class="container">
+                        <div class="membership">
+                            <h3>리움 멤버십</h3>
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="thead">카드</div>
+                                    <div class="tbody">
+                                        <div class="td1" data-aos="fade-up" data-aos-duration="1500">
+                                            <img src="./image/membership_friends.png" alt="리움 프렌즈 카드">
+                                            <strong class="card-title">리움 프렌즈</strong>
+                                            <span class="card-txt">예약 없이 상시 입장, <br class="mobile-view">회원 전용 프로그램까지</span>
+                                            <div class="card-bt">
+                                                <a href="../register/register_join_type.html"><span>프렌즈 회원 등록</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="td2" data-aos="fade-up" data-aos-duration="1500">
+                                            <img src="./image/membership_family.png" alt="리움 패밀리 카드">
+                                            <strong class="card-title">리움 패밀리</strong>
+                                            <span class="card-txt">가족, 지인과 함께 <br class="mobile-view">차별화된 프리미엄 혜택</span>
+                                            <div class="card-bt">
+                                                <a href="mailto:leeum.membership@samsung.com"><span>패밀리 회원 등록</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">회비</div>
+                                    <div class="tbody">
+                                        <div class="td1">
+                                            <strong class="fee">10만원 / 1년</strong>
+                                        </div>
+                                        <div class="td2">
+                                            <strong class="fee">30만원 (1인 / 1년)<br>50만원 (2인 / 1년)</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">관람 혜택</div>
+                                    <div class="tbody">
+                                        <div class="td1">
+                                            리움 / 호암 미술관 <br class="mobile-view">본인 무료 입장
+                                        </div>
+                                        <div class="td2">
+                                            <p>
+                                                <b>30만원</b> : 미술관 무료입장 <span class="light">(본인 + 3인)</span>
+                                            </p>
+                                            <p>
+                                                <b>50만원</b> : 미술관 무료입장 <span class="light">(본인 + 3인) X 2</span>
+                                            </p>
+                                        </div>
+                                        <div class="td3">
+                                            리움 방문 예약 불필요 (상시 바로 입장가능)<br>
+                                            디지털가이드 무료 대여
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">할인 혜택</div>
+                                    <div class="tbody">
+                                        <div class="td1">
+                                            리움 스토어, 리움 카페<br>
+                                            <b>10%</b> 할인 <br class="mobile-view">
+                                            <span class="light-s">(일부 상품 제외)</span>
+                                        </div>
+                                        <div class="td2">
+                                            리움 스토어, 리움 카페<br>
+                                            <b>20%</b> 할인 <br class="mobile-view">
+                                            <span class="light-s">(일부 상품 제외)</span>
+                                        </div>
+                                        <div class="td3">리움 유료강좌 프로그램 <b>20%</b> 할인</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">부가 혜택</div>
+                                    <div class="tbody">
+                                        <div class="td1"></div>
+                                        <div class="td2">회원사 VIP 전시 설명 <span class="light">(50구좌당 1회 / 년)</span> 등</div>
+                                        <div class="td3">
+                                            <p>기획전 프리뷰, 음악회, 다르게보기, 보존실 투어 등 회원전용 프로그램 참여 </p>
+                                            <p>문화예술 관련 온라인 뉴스레터 제공 등</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="Gift" class="gift-membership-wrap">
+                    <h2>gift-section</h2>
+                    <div class="container">
+                        <div class="gift-membership">
+                            <h3>멤버십 기프트</h3>
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="thead">카드</div>
+                                    <div class="tbody">
+                                        <div class="td1" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
+                                            <img src="./image/membership_gift.png" alt="리움 프렌즈 카드">
+                                            <strong class="card-title">기프트 멤버십 프렌즈</strong>
+                                            <span class="card-txt">잊지 못할 시간을 <br class="mobile-view">선물하고 싶다면</span>
+                                            <div class="card-bt">
+                                                <a href="mailto:leeum.membership@samsung.com"><span>멤버십 프렌즈 선물</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="td2" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
+                                            <img src="./image/membership_gift.png" alt="리움 프렌즈 카드">
+                                            <strong class="card-title">기프트 멤버십 패밀리</strong>
+                                            <span class="card-txt">소중한 사람에게 <br class="mobile-view">더욱 특별한 선물을</span>
+                                            <div class="card-bt">
+                                                <a href="mailto:leeum.membership@samsung.com"><span>멤버십 패밀리 선물</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">가격</div>
+                                    <div class="tbody">
+                                        <div class="td1">
+                                            <strong class="fee">10만원</strong>
+                                        </div>
+                                        <div class="td2">
+                                            <strong class="fee">30만원 (1인)<br>50만원 (2인)</strong>
+                                        </div>
+                                        <div class="td3">
+                                            10개 이상 구매 시 <b>10%</b> 할인
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="thead">혜택</div>
+                                    <div class="tbody">
+                                        <div class="td1">리움 프렌즈 <br class="mobile-view">멤버십과 동일</div>
+                                        <div class="td2">리움 프렌즈 <br class="mobile-view">멤버십과 동일</div>
+                                        <div class="td3">
+                                            <p>사용등록일로부터 1년간<span class="light-s">*사용자로 지정된 분의 사용등록 필요</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gift-detail">
+                                <h5>기프트 프렌즈 상세 안내</h5>
+                                <ul>
+                                    <li>
+                                        <h6>사용등록 기간</h6>
+                                        <div class="detail-txt">
+                                            <p>구매시에 사용자로 지정된 분에 한하여 사용등록이 가능하며, 구매시에 등록하신 휴대폰 번호로 사용등록 기간 도래 알림 문자를 보내 드립니다.</p>
+                                            <p>
+                                                사용등록 기간 경과 후에는 <b>10% 수수료 </b><span class="light">(구매 당시의 리움멤버십 프렌즈 연회비 기준)</span>를 납부하셔야 사용등록이 가능하며, <br class="pc-br">
+                                                구매일로부터 5년 경과 후에는 사용등록이 불가능합니다.</p>
+                                            <p>
+                                                리움멤버십 프렌즈의 연회비가 인상된 경우, 사용등록 기간 내에는 차액 지불 없이 사용등록이 가능하며, 
+                                                <br class="pc-br">사용등록 기간 경과 후에는 인상분을 납부하셔야 사용등록이 가능합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h6>사용등록 방법</h6>
+                                        <div class="detail-txt txt-bullet">
+                                            <p>가. 현장 등록 : 리움 멤버십데스크 <span class="light-s">(오전 10:00 ~ 오후 17:30 / 월요일 제외)</span></p>
+                                            <p>
+                                                나. 홈페이지 등록 : <a href="../../index.html">www.leeum.org</a> → 방문안내 → 멤버십안내 → 기프트 멤버십 → 사용등록<br>
+                                                <span class="light-s">* 패밀리카드는 인포데스크에서 등록 가능합니다.</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h6>구매 방법</h6>
+                                        <div class="detail-txt">
+                                            <p>가. 현장 구매 : 소정의 신청서를 작성한 후, 현금·무통장입금·신용카드 결제하시면 됩니다.</p>
+                                            <p>나. 온라인구매 : <a href="../../index.html">www.leeum.org</a> → 방문안내 → 멤버십 안내 → 기프트 멤버십 → 구매</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h6>구매취소 및 환불</h6>
+                                        <div class="detail-txt">
+                                            <p>구매취소 및 환불의사를 전달하고 패키지를 반납한 날짜를 환불기준일로 하며, 영업일 기준 10일 이내로 환불이 이루어집니다.</p>
+                                            <div class="refund-box">
+                                                <div>
+                                                    <b>사용등록을 하지 않은 경우</b>
+                                                    <p>사용등록 기간이 지나지 않았다면, 구매당시의 리움프렌즈 연회비의 <b>5%</b> 공제</p>
+                                                    <p>사용등록 기간이 지나고 구매일로부터 5년 이내인 경우 구매 당시리움 멤버십 프렌즈 연회비의 <b>10%</b></p>
+                                                </div>
+                                                <div>
+                                                    <b>사용등록을 한 경우</b>
+                                                    <p>리움 프렌즈 멤버십 약관에 따른 환불기준 적용</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="corporate" class="con-box corporate-member-wrap">
+                    <h2>법인 회원</h2>
+                    <div class="container">
+                        <div class="corporate-member" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
+                            <div class="back-cover">
+                                <div class="corporate-txt">
+                                    <h3>Corporate Member</h3>
+                                    <p>
+                                        리움의 법인 회원이 되어 <br class="mobile-view">
+                                        관람 및 행사장소 대여 등의 혜택과 <br>
+                                        문화예술 지원 기업으로서의 <br class="mobile-view">
+                                        사회적 이미지 홍보 효과를 누리세요.
+                                    </p>
+                                </div>
+                                <div class="corporate-bt" >
+                                    <a href="mailto:museum@leeum.org"><span>법인 회원 가입문의</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="associate" class="con-box associate-wrap">
+                    <h2>affiliate-section</h2>
+                    <div class="container">
+                        <div class="associate">
+                            <h3 data-aos="fade-up" data-aos-duration="1300">제휴 할인</h3>
+                            <ul class="associate-con">
+                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+                                    <div class="store-img">
+                                        <img src="./image/membership_affiliate(1).png" alt="마렘마">
+                                    </div>
+                                    <div class="store-txt-wrap">
+                                        <div class="store-txt">
+                                            <p>마렘마</p>
+                                            <b><span class="red">10% </span>할인</b>
+                                            <address>서울 용산구 이태원로 49길 8</address>
+                                            <a class="tel" href="tel:022-790-5633"><img src="../../image/icon_call.svg" alt="">022-790-5633</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+                                    <div class="store-img">
+                                        <img src="./image/membership_affiliate(2).png" alt="한남작업실">
+                                    </div>
+                                    <div class="store-txt-wrap">
+                                        <div class="store-txt">
+                                            <p>한남작업실</p>
+                                            <b><span class="red">10%</span>할인</b>
+                                            <address>서울 용산구 이태원로 55나길 7</address>
+                                            <a class="tel" href="tel:0507-1320-5620"><img src="../../image/icon_call.svg" alt="">0507-1320-5620</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+                                    <div class="store-img">
+                                        <img src="./image/membership_affiliate(3).png" alt="마라">
+                                    </div>
+                                    <div class="store-txt-wrap">
+                                        <div class="store-txt">
+                                            <p>마라</p>
+                                            <b><span class="red">10%</span>할인</b>
+                                            <address>서울 용산구 이태원로 243 4층</address>
+                                            <a class="tel" href="tel:02-794-5559"><img src="../../image/icon_call.svg" alt="">02-794-5559</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+                                    <div class="store-img">
+                                        <img src="./image/membership_affiliate(4).png" alt="치즈플로">
+                                    </div>
+                                    <div class="store-txt-wrap">
+                                        <div class="store-txt">
+                                            <p>치즈플로</p>
+                                            <b><span class="red">10%</span>할인</b>
+                                            <address>서울 용산구 이태원로 49길 19</address>
+                                            <a class="tel" href="tel:0507-1357-7015"><img src="../../image/icon_call.svg" alt="">0507-1357-7015</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="faq-wrap">
+                    <h2>faq-section</h2>
+                    <div class="container">
+                        <h3>FAQ</h3>
+                        <ul class="faq-list">
+                            <li>
+                                <div class="q-box">
+                                    <p><b>Q.</b>회원카드 수령방법은 어떻게 되나요?</p>
+                                    <img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                                </div>
+                                <div class="a-box">
+                                    <p>회원 가입의 경우 즉시 수령 가능하며, 온라인 기업회원의 경우, 우편으로 발송해 드립니다. 발송 및  수령에 걸리는 시간은 미술관 휴일을 제외한 7일 내외 입니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q-box">
+                                    <p><b>Q.</b>가입신청을 한 후 언제부터 회원이 될 수 있나요?</p>
+                                <img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                                </div>
+                                <div class="a-box">
+                                    <p>온라인으로 가입신청을 한 회원님께서는 결제를 완료하시면 바로 회원 자격이 주어집니다. 현장가입 시, 결제 당일부터 회원 자격이 주어집니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q-box">
+                                    <p><b>Q.</b>주소를 변경하고 싶습니다. 어떻게 수정할 수 있나요?</p>
+                                    <img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                                </div>
+                                <div class="a-box">
+                                    <p>변경된 개인정보를 변경하시려면 <a href="tel:02-2014-6900"><b>02-2014-6900</b></a>으로 전화 주시면 변경된 정보를 수정하여 드립니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q-box">
+                                    <p><b>Q.</b>멤버십 카드를 분실하였습니다. 재발급이 가능한가요?</p>
+                                    <img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                                </div>
+                                <div class="a-box">
+                                    <p>리움 내 인포데스크에 오셔서 멤버십 카드 재발급을 요청해주세요. 방문 시 꼭 신분증을 지참해 주시기 바랍니다. 기존 카드는 사용이 불가능하며, 재발급 후 기존 카드를 찾으셨다면 폐기하여 주시기 바랍니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="q-box">
+                                    <p><b>Q.</b>회원가입 약관은 어떻게 되나요?</p>
+                                    <img src="../../image/icon_arrow_thin.svg" class="dropdown">
+                                </div>
+                                <div class="a-box">
+                                    <a href="../register/register_join_terms.html">
+                                        <p class="shortcut">약관 보기<img src="../../image/icon_shortcut.svg" alt="shortcut"></p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <div class="sitemap-banner-wrap">
+    <div class="container">
+        <div class="sob">
+            <div class="sitemap">
+                <div class="m1">
+                    <h6>리움</h6>
+                    <ul>
+                        <li><a href="../about/about_intro.html">미술관 소개</a></li>
+                        <li><a href="../about/about_guide.html">관람 안내</a></li>
+                        <li><a href="../about/about_facility.html">시설 안내</a></li>
+                        <li><a href="../about/about_map.html">오시는 길</a></li>
+                        <li><a href="../about/about_membership.html">리움 멤버십</a></li>
+                    </ul>
+                </div>
+                <div class="m2">
+                    <h6>전시</h6>
+                    <ul>
+                        <li><a href="../exhibition/exhibition_now.html">현재 전시</a></li>
+                        <li><a href="../exhibition/exhibition_past.html">지난 전시</a></li>
+                    </ul>
+                </div>
+                <div class="m3">
+                    <h6>소장품</h6>
+                    <ul>
+                        <li><a href="../collect/collect_antique.html">고미술</a></li>
+                        <li><a href="../collect/collect_modern.html">현대미술</a></li>
+                        <li><a href="../collect/collect_conserve.html">보존연구</a></li>
+                        <li><a href="../collect/collect_sign.html">수어해설</a></li>
+                    </ul>
+                </div>
+                <div class="m4">
+                    <h6>프로그램</h6>
+                    <ul>
+                        <li><a href="../program/program_now.html">현재 프로그램</a></li>
+                        <li><a href="../program/program_past.html">지난 프로그램</a></li>
+                    </ul>
+                </div>
+                <div class="m5">
+                    <h6>작가</h6>
+                    <ul>
+                        <li><a href="../artist/artist.html">작가</a></li>
+                    </ul>
+                </div>
+                <div class="m6">
+                    <h6>소식</h6>
+                    <ul>
+                        <li><a href="../news/news_notice.html">공지사항</a></li>
+                        <li><a href="../news/news_data.html">자료</a></li>
+                        <li><a href="../news/news_faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="outlink">
+                <ul>
+                    <li>
+                        <a href="https://ticket.leeum.org/leeum/personal/exhibitList.do">
+                            <div class="reserve">
+                                <h6>예약 · 예매</h6>
+                                <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://leeumstore.org/">
+                            <div class="store">
+                                <h6>리움 스토어</h6>
+                                <img src="../../image/icon_shortcut.svg" alt="바로가기">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="../register/register_join_type.html" class="banner">
+                <div class="banner-box">
+                    <div class="banner-txt-wrap">
+                        <div class="banner-txt">
+                            <h6>LEEUM <span>MemberShip</span></h6>
+                            <p>
+                                <strong>리움 멤버십</strong>에 가입하고<br>
+                                <strong>무료 관람 및 유료 프로그램 할인</strong> 등<br>
+                                다양한 혜택을 만나보세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="site-info-wrap">
+    <div class="container">
+        <div class="site-info">
+            <div class="i1">
+                <ul>
+                    <li><a>개인정보처리방침</a></li>
+                    <li><a>이메일 무단수집 거부</a></li>
+                    <li><a href="mailto:museum@leeum.org">이메일 문의<span class="contact">museum@leeum.org</span></a></li>
+                    <li><a href="tel:02-2014-6900">전화문의<span class="contact">02-2014-6900</span></a></li>
+                </ul>
+            </div>
+            <div class="i2">
+                <select name="family">
+                    <option value="" hidden>패밀리 사이트</option>
+                    <option value="http://www.samsungculture.org/">삼성문화재단</option>
+                    <option value="http://www.hoammuseum.org/">호암미술관</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="leeum-info-wrap">
+    <div class="container">
+        <div class="leeum-info">
+            <div class="place">
+                <h5>리움 미술관</h5><span class="eng">Leeum museum of Art</span>
+                <address>서울특별시 용산구 이태원로55길 60-16 (한남동)</address>
+                <address>우) 04348</address>
+            </div>
+            <div class="hour">
+                <h6>영업 시간</h6>
+                <p><time>10:00 ~ 18:00</time><span>&nbsp;(매표 마감 <time>17 : 30</time>)</span></p>
+                <p>휴관일 : 매주 월요일, 매년 설날(음력) 및 추석 당일</p>
+            </div>
+            <div class="sns-copyright">
+                <div class="sns">
+                    <a href="https://www.facebook.com/leeumofficial"><img src="../../image/icon_facebook.svg"></a>
+                    <a href="https://www.instagram.com/leeummuseumofart/"><img src="../../image/icon_instagram.svg"></a>
+                    <a href="https://www.youtube.com/channel/UCyXVnJijxHsBrzN9AAZ-Yxw/"><img src="../../image/icon_youtube.svg"></a>
+                </div>
+                <p>© Leeum Museum of Art. All Rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>

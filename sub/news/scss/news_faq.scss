@@ -1,0 +1,124 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('faq_header.jpg');
+}
+
+main {
+    .mark {
+        font-size: 120%;
+        margin-right: 5px;
+        color: $yellow-brown;
+    }
+    .question {
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @include responsive(pc-screens) {
+            font-size: 22px;
+        }
+    }
+
+    .faq-content {
+        display: none;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: $bk6;
+        text-align: right;
+
+        @include responsive(pc-screens) {
+            padding: 40px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .explain {
+            @include content_align(justify, 1.8em);
+
+            @include responsive(pc-screens) {
+                font-size: 18px;
+            }
+        }
+
+        .shortcut {
+            @include gothic_font(semibold, 15px);
+            color: $yellow-brown;
+            margin-top: 20px;
+
+            @include responsive(pc-screens) {
+                font-size: 17px;
+            }
+
+            img {
+                margin-left: 10px;
+                height: 12px;
+                filter: $svg-yellowbrown;
+            }
+        }
+    }
+
+    li {
+        border-bottom: 1px solid $bk5;
+        padding: 0 10px;
+
+        @include responsive(pc-screens) {
+            padding: 30px 20px;
+        }
+        &:first-child {
+            border-top: 1px solid $bk5;
+        }
+    }
+
+    .q-box {
+        @include flex_between_center();
+        padding-top: 20px;
+        padding-bottom: 20px;
+        cursor: pointer;
+
+        @include responsive(pc-screens) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        p {
+            @include gothic_font(semibold, 18px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            
+            @include responsive(pc-screens) {
+                font-size: 20px;
+            }
+
+            b {
+                font-size: 120%;
+                margin-right: 5px;
+                color: $yellow-brown;
+            }
+        }
+
+        .dropdown {
+            @include icon_rotate(180deg);
+            height: 8px;
+            
+            @include responsive(pc-screens){
+                height: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    @include footer();
+}

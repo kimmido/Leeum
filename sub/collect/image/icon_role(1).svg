@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 46.91 52.45" style="enable-background:new 0 0 46.91 52.45;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#AC3F21;stroke-width:2;stroke-miterlimit:10;}
+	.st1{clip-path:url(#SVGID_1_);fill:#FFFFFF;}
+	.st2{clip-path:url(#SVGID_1_);}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M38.5,6.23c-2.35,1.58-4.72,4.39-4.72,7.44c0,3.73,5.56,8.46,5.56,8.46c4.01,3.33,6.56,8.36,6.56,13.99
+			c0,5.63-2.55,10.66-6.56,14c-0.58,0.48-1.18,0.92-1.81,1.33H17.87c-0.64-0.4-1.24-0.85-1.81-1.33c-4.01-3.34-6.56-8.37-6.56-13.99
+			c0-5.62,2.55-10.65,6.56-13.98c0,0,5.66-4.71,5.66-8.47c0-3.04-2.28-5.72-4.63-7.32"/>
+		<path class="st0" d="M39.96,3.67c0,0.74-0.23,1.41-0.6,1.9c-0.37,0.48-0.89,0.78-1.45,0.78H17.5c-1.14,0-2.06-1.2-2.06-2.68
+			c0-0.74,0.23-1.4,0.6-1.89l0.01-0.01c0.07-0.1,0.15-0.17,0.23-0.25C16.62,1.19,17.05,1,17.5,1h20.4c0.46,0,0.88,0.19,1.22,0.52
+			c0.08,0.08,0.15,0.16,0.22,0.24C39.73,2.25,39.96,2.93,39.96,3.67z"/>
+	</g>
+	<g>
+		<polyline class="st0" points="19.57,31.52 17.55,26.46 14.15,23.69 		"/>
+		<line class="st0" x1="20.64" y1="25.03" x2="17.53" y2="26.61"/>
+	</g>
+	<g>
+		<polyline class="st0" points="19.57,31.9 17.55,26.84 14.15,24.07 		"/>
+		<line class="st0" x1="20.64" y1="25.42" x2="17.53" y2="26.99"/>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<path id="SVGID_3_" d="M12.94,16.22L12.94,16.22c6.25,0,11.32,5.07,11.32,11.32v0c0,6.25-5.07,11.32-11.32,11.32h0
+					c-6.25,0-11.32-5.07-11.32-11.32v0C1.62,21.29,6.69,16.22,12.94,16.22z"/>
+			</defs>
+			<clipPath id="SVGID_1_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="-7.89" y="13.73" class="st1" width="35.96" height="24.39"/>
+			<g class="st2">
+				<g>
+					<polyline class="st0" points="17.37,34.38 14.72,27.82 10.26,24.23 					"/>
+					<line class="st0" x1="18.78" y1="25.97" x2="14.7" y2="28.01"/>
+				</g>
+				<g>
+					<path class="st0" d="M4.14,40.35c0-7.29,3.35-13.81,8.62-18.13c0,0,7.43-6.1,7.43-10.98"/>
+				</g>
+			</g>
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;fill:none;stroke:#231F20;stroke-width:2;stroke-miterlimit:10;"/>
+		</g>
+		<line class="st3" x1="5.44" y1="37.28" x2="0.79" y2="43.34"/>
+	</g>
+</g>
+</svg>

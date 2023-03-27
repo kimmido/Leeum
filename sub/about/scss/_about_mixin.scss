@@ -1,0 +1,160 @@
+//탭메뉴 구성
+//사용할때 탭메뉴 리스트를 작성하면 자동으로 늘어남
+@mixin tab_menu() {
+
+    .tabmenu-wrap{
+
+        .tab-nav{
+            display:table;
+            width:100%;
+
+            &.fixed {
+                @include out_container();
+                position: fixed;
+                bottom: -2px;
+                padding-top: 20px;
+                border-top: 1px solid $bk5;
+                background: #fff;
+                z-index: 50;
+
+                .nav {
+
+                    &.on a:after {
+                        bottom: 0;
+                        top: -21px;
+                        height: 3px;
+                    }
+                }
+            }
+
+            .nav{
+                display:table-cell;
+                width:50px;
+                a{
+                    transition:.4s;
+                    position: relative;
+                    display:block;
+                    @include gothic_font(medium, 18px);
+                    color: $bk3;
+                    text-align:center;
+                    border-bottom: 1px solid $bk5;
+                    height:40px;
+
+                    
+                    &:hover {
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        .shortcut {
+                            filter: $svg-black;
+                        }
+                    }
+
+                    &:after {
+                            content:"";
+                            transition:.4s;
+                            width:0px;
+                    }
+                    
+                    .shortcut {
+                        height: 14px;
+                        margin-left: 5px;
+                        margin-bottom: 1px;
+                        filter: $svg-bk3;
+                        transition:.4s;
+
+                        @include responsive(tablet-screens) {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+            &.on{
+                    a{
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        &:after{
+                            content:"";
+                            position:absolute;
+                            bottom:-1px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            width:100%;
+                            height:2px;
+                            background-color: #000;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-con{
+            padding-top: 50px;
+
+            @include responsive(pc-screens) {
+                padding-top: 100px;
+            }
+
+            
+            .con-box{
+                display:none;
+            }
+        }
+    }
+}
+
+// hover시 배경이 채워지는 효과 + 버튼 안의 텍스트 정가운데 정렬
+// html: div > a > span > txt
+// a 상위 태그에 선언
+// color 4가지 필요
+@mixin bt-hover($border, $txt, $hover-back, $hover-txt) {
+    box-shadow: inset 0 0 0 1px $border;
+    border-radius: 5px;
+
+    a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+        &::before {
+            @include overlay_bk(1);
+            width: 0;
+            background-color: $hover-back;
+            border-radius: 3px;
+            
+            transition: 
+                width .8s 0s,
+                border-radius 0s .8s;
+
+        }
+
+        span {
+            @include element_center();
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: $txt;
+
+            transition: color .4s;
+        }
+        
+        &:hover {
+
+            &::before {
+                width: 100%;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            span {
+                color: $hover-txt;
+            }
+        } 
+    }
+}

@@ -1,0 +1,373 @@
+@charset 'utf-8';
+@import '../../../scss/style.scss';
+@import '../../../scss/common.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+@import '../../../scss/mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+
+    @include full_bg('program_header.jpg');
+}
+
+main {
+    @include main_sub();
+    overflow-x: hidden;
+
+    section.info {
+        @include detail_info();
+
+        .item-wrap {
+            margin-bottom: 0;
+
+            .i-slide {
+
+                @include responsive(pc-screens) {
+                    width: 100%;
+                }
+
+                .main-pic {
+                    height: auto;
+                }
+            }
+
+            .i-des {
+
+                @include responsive(pc-screens) {
+                    width: 100%;
+                }
+
+                .loc-icon {
+                    justify-content: flex-end;
+                    margin-bottom: 20px;
+                    @include responsive(pc-screens) {
+                        margin-top: 40px;
+                    }
+
+                    .loc-box {
+                        display: flex;
+                        
+                        column-gap: 15px;
+        
+                        .loc div {
+    
+                            &.tag {
+                                width: 50px;
+                            }
+        
+                            &:last-child {
+                                width: calc(80px - 50px);
+                            }
+                        }
+                    }
+                }
+    
+                .tit-exp {
+                    margin-bottom: 50px;
+
+                    @include responsive(pc-screens) {
+                        margin-bottom: 0;
+                    }
+
+                    .tit {
+
+                        & * {
+                            text-align: center;
+                        }
+
+                        @include responsive(pc-screens) {
+                        }
+
+                        .lang {
+                            @include gothic_font(medium, 18px);
+                            color: $yellow-brown;
+                            margin-top: 0;
+
+                            @include responsive(pc-screens){
+                                font-size: 22px;
+                            }
+                        }
+
+                        h4 {
+                            font-size: 30px;
+
+                            @include responsive(pc-screens){
+                                font-size: 36px;
+                            }
+                        }
+                    }
+
+                    .exp {
+
+                        a {
+                            color: $yellow-brown;
+
+                            img {
+                                height: 12px;
+                                margin-left: 5px;
+                                filter: $svg-yellowbrown;
+                            }
+                        }
+                    }
+                }  
+            }
+        }
+    }
+
+    .text {
+        @include responsive(pc-screens){
+            position: relative;   
+        }
+
+        p {
+            font-size: 20px;
+            color: $yellow-brown;
+            padding-top: 50px;
+            padding-bottom: 15px;
+            @include gothic_font(medium, 20px); 
+
+            @include responsive(pc-screens){
+                font-size: 26px;
+            }
+        }
+
+        h2 {
+            @include gothic_font(bold, 30px);
+
+            @include responsive(pc-screens){
+                font-size: 46px;
+            }
+        }
+    }
+
+    .program-des {
+
+        @include responsive(pc-screens) {
+            @include flex_between();
+            flex-direction: row-reverse;
+            margin-top: 80px;
+        }
+    }
+
+
+    .r-d {
+        @include responsive(pc-screens){
+            width: 34.28571428571429%;
+        }
+
+        .request {
+            
+            a {
+            @include gothic_font(semibold);
+            width: 100%;
+            padding: 13px;
+            border-radius: 5px;
+            text-align: center;
+            color: #f00;
+            border: 1px solid #f00;
+    
+                @include responsive(pc-screens){
+                    font-size: 18px;
+                    padding: 20px;
+                }
+            }
+        }
+    
+        .request-desc {
+
+            .content {
+                span {
+                    @include gothic_font(semibold, 18px);
+                    padding-top: 20px;
+
+                    @include responsive(pc-screens){
+                        font-size: 24px;
+                    }
+                }
+                
+                p {
+                    padding: 15px 0 25px 0;
+                    border-bottom: 1px solid $bk5;
+
+                    @include responsive(pc-screens){
+                        @include gothic_font(regular, 26px);
+                        color: $bk1;
+                    }
+                }
+    
+                &:last-child p {
+                    border-bottom: 0;
+                }
+            }
+            
+            table.mini-box {
+                @include out_container();
+                padding: 20px 30px;
+                margin-bottom: 50px;
+                line-height: 2em;
+                background: $bk6;
+                
+                @include responsive(pc-screens) {
+                    @include in_container();
+                    width: 100%;
+                    margin-bottom: 80px;
+                    border-radius: 5px;
+                }
+
+                th {
+                    width: 15%;
+                    text-align: left;
+
+                    @include responsive(pc-screens) {
+                        text-align: left;
+                    }
+                }
+
+                td {
+                    color: $bk1;
+                }
+            }
+        }
+    }
+
+    .o-i-p {
+        @include responsive(pc-screens){
+            width: 60%;
+
+            h6:first-child {
+                margin-top: 0 !important;
+            }
+        }
+        
+        .introduce {
+            @include responsive(pc-screens){
+                margin-bottom: 60px;
+            }
+
+            h6 {
+                margin: 40px 0 20px;
+                @include gothic_font(semibold, 18px);
+
+                @include responsive(pc-screens){
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .ticket-info {
+
+            h6 {
+                margin: 40px 0 20px;
+                @include gothic_font(semibold, 18px);
+
+                @include responsive(pc-screens){
+                    font-size: 18px;
+                }
+            }
+
+            ul {
+                li {
+                    @include content_align(justify, 1.8em);
+                    @include gothic_font(medium);
+                    padding-left: 11px;
+                    margin-bottom: 10px;
+                    background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+                    background-size: 2px;
+                    
+                    @include responsive(tablet-screens) {
+                        padding-left: 14px;
+                        font-size: 17px;
+                    }
+
+                    br {
+                        display: none;
+
+                        @include responsive(pc-screens) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        p {
+            @include content_align(justify);
+
+            @include responsive(pc-screens) {
+                font-size: 17px;
+            }
+        }
+
+        .content {
+            text-align: justify;
+            margin-top: 60px;
+            
+            span {
+                @include gothic_font(semibold, 18px);
+
+                @include responsive(pc-screens){
+                    font-size: 28px;
+                }
+            }
+    
+            p {
+                @include content_align();
+                margin-bottom: 30px;
+
+                @include responsive(pc-screens){
+                    @include gothic_font(regular, 22px);
+                    color: $bk1;
+                }
+
+                &.title {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &.intro {
+
+                .first {
+                    @include gothic_font(semibold);
+                    margin-bottom: 20px;
+
+                    @include responsive(pc-screens){
+                        @include gothic_font(semibold, 24px);
+                        
+                    }
+                }
+            }
+
+            &.precaution {
+                p {
+                    margin-bottom: 10px;
+                    line-height: 28px;
+    
+                    @include responsive(pc-screens){
+                        width: 620px;
+                        @include gothic_font(regular, 22px);
+                    }
+                }
+            }
+        }
+    }
+
+    section.movePage {
+        @include move_page();
+        margin-top: 100px;
+        
+        @include responsive(pc-screens){
+            font-size: 18px;
+        }
+    }
+}
+
+footer {
+    @include footer();
+}
